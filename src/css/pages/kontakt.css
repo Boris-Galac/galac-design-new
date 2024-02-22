@@ -1,0 +1,74 @@
+.body-kontakt {
+  padding: 0.5rem;
+}
+.kontakt {
+  padding: 1rem;
+  padding-top: 2rem;
+  padding-bottom: 5rem;
+}
+.kontakt-row {
+  max-width: 1024px;
+  margin-inline: auto;
+}
+.kontakt-row:nth-child(1) {
+  margin-bottom: 2rem;
+}
+.kontakt-row__inner-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.kontakt-row__inner-wrapper > * {
+  flex: 1;
+}
+.ostali-podaci {
+  padding: 1rem;
+}
+.ostali-podaci {
+  display: grid;
+  gap: 1rem;
+  padding: 1rem;
+}
+.ostali-podaci__info-row {
+  display: grid;
+  gap: 0.3rem;
+}
+.ostali-podaci__info-row img {
+  width: 20px;
+  object-fit: contain;
+}
+.ostali-podaci__inner-wrapper {
+  background-color: rgba(27, 37, 67, 0.4);
+  border-radius: 6px;
+  padding-block: 0.8rem;
+  padding-inline: 1rem;
+}
+.ostali-podaci__row {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+.kontakt-socials {
+  padding: 1rem;
+}
+.kontakt-socials__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: flex-start;
+}
+.instagram-feed {
+  height: 365px;
+  max-width: 100% !important;
+}
+.facebook-feed {
+  width: 340px;
+}
+
+@media (min-width: 768px) {
+  .kontakt-row__inner-wrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+  }
+}

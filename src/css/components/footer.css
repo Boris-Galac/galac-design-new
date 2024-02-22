@@ -1,0 +1,120 @@
+.footer {
+  background-color: var(--footer-clr) !important;
+  padding: 0.5rem;
+  padding-top: 3rem;
+  padding-bottom: 12rem;
+}
+.footer__wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.footer__list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+.footer__link {
+  font-size: 1.1rem;
+  transition: 0.2s;
+}
+.footer__list:hover .footer__link {
+  opacity: 0.5;
+}
+.footer__list .footer__link:hover {
+  opacity: 1;
+  scale: 1.1;
+}
+.footer__link:hover {
+  font-size: 1.1rem;
+  transition: 0.2s;
+}
+.footer__socials {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+.footer__bottom-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.footer__obrt-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 1rem;
+  background-color: rgba(0, 0, 0, 0.56) !important;
+  padding: 1rem;
+  border-radius: 6px;
+}
+.footer__obrt-info a {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.2rem;
+}
+.footer__copyright {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.footer__socials a {
+  transition: 0.25s;
+}
+.footer__socials a:hover {
+  scale: 1.5;
+}
+.footer__address {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+footer strong {
+  width: -webkit-fill-available;
+}
+.copyright {
+  background-color: var(--black);
+  padding: 2rem;
+  display: grid;
+  place-items: center;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.footer-logo {
+  width: min(100%, 15rem);
+  margin: auto;
+}
+.copyright__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
+}
+@media (min-width: 960px) {
+  .footer {
+    padding-top: 5rem;
+  }
+  .footer__wrapper {
+    gap: 4rem;
+  }
+  .footer__list {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+  .footer__obrt-info {
+    width: max-content;
+    margin-inline: auto;
+  }
+  .footer__bottom-info {
+    flex-direction: row;
+    align-items: center;
+  }
+}

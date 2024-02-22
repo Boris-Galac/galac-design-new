@@ -1,0 +1,143 @@
+.body-faq {
+  padding: 0.5rem;
+}
+.faq {
+  position: relative;
+  isolation: isolate;
+  padding: 1rem;
+  padding-bottom: 5rem;
+}
+.faq.ui-wrapper {
+  background-color: var(--low-mid-white);
+}
+.faq__question span {
+  color: var(--dark);
+  display: contents;
+  pointer-events: none;
+  user-select: none;
+}
+.faq::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  background: url("/assets/images/faq-overlay.png") no-repeat center
+    center/cover;
+  background-attachment: fixed;
+}
+.faq__wrapper {
+  display: grid;
+  gap: 2.5rem;
+  max-width: 50rem;
+  margin-inline: auto;
+}
+.faq__btn {
+  cursor: pointer;
+  aspect-ratio: 1;
+  width: 1.5rem;
+  display: grid;
+  place-items: center;
+}
+.drop {
+  position: relative;
+  width: 1rem;
+  background-color: var(--white);
+  height: 2px;
+}
+.drop::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  width: 2px;
+  background-color: var(--white);
+  height: 1rem;
+}
+.drop.active::after {
+  background-color: transparent;
+}
+.faq__question {
+  color: var(--white);
+  font-weight: 400;
+  display: inline-flex;
+  justify-content: space-between;
+  cursor: pointer;
+  user-select: none;
+  gap: 2rem;
+  padding: 1rem;
+  width: 100%;
+}
+.faq__paragraph {
+  font-weight: 300;
+  transition: 0.5s;
+  transform-origin: top;
+  transform: scaleY(0);
+  pointer-events: none;
+  display: none;
+  animation: close-faq 0.5s forwards;
+  padding: 1rem;
+}
+@keyframes close-faq {
+  from {
+    display: block;
+    transform: scaleY(1);
+  }
+  to {
+    display: none;
+    transform: scaleY(0);
+  }
+}
+.faq__paragraph.active {
+  transform: scaleY(1);
+  pointer-events: visible;
+  display: block;
+  animation: open-faq 0.5s forwards;
+}
+@keyframes open-faq {
+  from {
+    display: none;
+    transform: scaleY(0);
+  }
+  to {
+    display: block;
+    transform: scaleY(1);
+  }
+}
+.drop {
+  position: relative;
+  width: 1rem;
+  background-color: var(--white);
+  height: 2px;
+}
+
+.body-faq .ui--wrapper-desktop::after {
+  content: "" !important;
+  position: absolute !important;
+  background: url("/src/assets/images/line-decoration.svg") no-repeat center
+    center/cover !important;
+  opacity: 0.3 !important;
+  right: -4% !important;
+  bottom: -600px !important;
+  height: 137% !important;
+  width: 280% !important;
+  pointer-events: none !important;
+  z-index: -1 !important;
+}
+@media (min-width: 768px) {
+  .faq {
+    padding-block: 4rem;
+    padding-bottom: 10rem;
+  }
+  .body-faq .ui--wrapper-desktop::after {
+    content: "" !important;
+    position: absolute !important;
+    background: url("/src/assets/images/line-decoration.svg") no-repeat center
+      center/cover !important;
+    opacity: 0.3 !important;
+    right: -44% !important;
+    bottom: -410px !important;
+    height: 100% !important;
+    width: 240% !important;
+    pointer-events: none !important;
+  }
+}

@@ -1,0 +1,57 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+html,
+body {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+img,
+picture,
+svg,
+video {
+  max-width: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+}
+span {
+  display: inline-block;
+}
+ul,
+li {
+  list-style: none;
+}
+figure {
+  margin: 0;
+}
+section {
+  position: relative;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 7px;
+}
+*::selection {
+  background-color: var(--black);
+  color: var(--white);
+}
+/* Track */
+::-webkit-scrollbar-track {
+  background-color: var(--black);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background-color: hsl(215, 40%, 61%);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgb(125, 187, 238);
+}

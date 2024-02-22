@@ -1,0 +1,67 @@
+.body-o-nama {
+  padding: 0.5rem;
+}
+.o-nama {
+  padding-inline: 1rem;
+}
+.o-nama.ui-wrapper {
+  padding: 1rem;
+  padding-bottom: 5rem;
+  background-color: var(--low-mid-white);
+}
+.o-nama .logo-wrapper {
+  perspective: 1000px;
+}
+.o-nama-logo {
+  width: min(100%, 150px);
+  margin-inline: auto;
+  margin-block: 2rem;
+  animation: o-nama-logo 8s infinite linear;
+}
+@keyframes o-nama-logo {
+  to {
+    transform: rotateY(360deg);
+  }
+}
+.o-nama-paragraph {
+  margin-bottom: 2rem;
+}
+.proces-wrapper {
+  padding: 1rem;
+}
+.o-nama .line-separator {
+  height: 1px;
+  background-color: var(--border-white);
+  margin-block: 1.5rem;
+}
+.o-nama-tech {
+  padding-block: 2rem;
+}
+
+.body-o-nama .ui--wrapper-desktop::after {
+  content: "" !important;
+  position: absolute !important;
+  background: url("/src/assets/images/line-decoration.svg") no-repeat center
+    center/cover !important;
+  opacity: 0.5 !important;
+  right: -4% !important;
+  bottom: -600px !important;
+  height: 67% !important;
+  width: 130% !important;
+  pointer-events: none !important;
+  z-index: -1 !important;
+}
+@media (min-width: 768px) {
+  .body-o-nama .ui--wrapper-desktop::after {
+    content: "" !important;
+    position: absolute !important;
+    background: url("/src/assets/images/line-decoration.svg") no-repeat center
+      center/cover !important;
+    opacity: 0.5 !important;
+    right: -44% !important;
+    bottom: -410px !important;
+    height: 100% !important;
+    width: 120% !important;
+    pointer-events: none !important;
+  }
+}

@@ -1,0 +1,185 @@
+.main {
+  margin-bottom: 5rem;
+}
+.container {
+  width: min(100% - 32px, 1024px);
+  margin-inline: auto;
+}
+
+/* ui wrappers */
+
+.ui-wrapper {
+  position: relative;
+  background-color: var(--mid-white);
+  border: 1px solid var(--border-mid-white);
+  border-radius: 6px;
+  overflow: hidden;
+}
+.ui-wrapper:before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(
+    150deg,
+    hsla(0, 0%, 100%, 0.02) 50%,
+    hsla(0, 0%, 100%, 0) 10%
+  );
+  border-radius: 6px;
+}
+.ui-wrapper::after {
+  content: "";
+  position: absolute;
+  background: url("/src/assets/images/line-decoration.svg") no-repeat center
+    center/cover;
+  opacity: 0.5;
+  right: -44%;
+  bottom: 0;
+  height: 100%;
+  width: 60%;
+  pointer-events: none;
+}
+.ui-wrapper-1 {
+  position: relative;
+  background-color: var(--low-mid-white);
+  border: 1px solid var(--border-mid-white);
+  border-radius: 6px;
+  overflow: hidden;
+}
+.ui-wrapper-1:before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(
+    150deg,
+    hsla(0, 0%, 100%, 0.02) 50%,
+    hsla(0, 0%, 100%, 0) 10%
+  );
+  border-radius: 6px;
+}
+
+/* background effect */
+
+.effect {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--effect-linear-1);
+  overflow: hidden;
+  z-index: -5;
+}
+.circle-1 {
+  z-index: 2;
+  background-color: var(--effect-linear-2);
+  position: absolute;
+  border-radius: 50%;
+  width: 30rem;
+  aspect-ratio: 1;
+  filter: blur(200px);
+  animation: circle-1 40s linear infinite alternate;
+}
+@keyframes circle-1 {
+  0% {
+    transform: translateX(30rem);
+  }
+  25% {
+    transform: translateY(30rem);
+  }
+  50% {
+    transform: translateX(-30rem);
+  }
+  100% {
+    transform: translateY(30rem);
+  }
+}
+.circle-2 {
+  z-index: 1;
+  background-color: hsla(348, 67%, 51%, 0.1);
+  position: absolute;
+  border-radius: 50%;
+  width: 120rem;
+  aspect-ratio: 1;
+  filter: blur(50px);
+  animation: circle-2 30s linear infinite alternate;
+}
+@keyframes circle-2 {
+  0% {
+    transform: translateY(50rem);
+  }
+  25% {
+    transform: translateX(-50rem);
+  }
+  50% {
+    transform: translateY(30rem);
+  }
+  100% {
+    transform: translateY(50rem);
+  }
+}
+
+.icon {
+  object-fit: contain;
+}
+
+/* overlay */
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background-color: var(--overlay-clr);
+  z-index: 4;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+}
+.overlay[data-visible="false"] {
+  animation: close-overlay 0.4s forwards;
+}
+@keyframes close-overlay {
+  from {
+    opacity: 1;
+    pointer-events: visible;
+  }
+  to {
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+.overlay[data-visible="true"] {
+  animation: open-overlay 0.4s forwards;
+}
+@keyframes open-overlay {
+  from {
+    opacity: 0;
+    pointer-events: none;
+  }
+  to {
+    opacity: 1;
+    pointer-events: visible;
+  }
+}
+.yellow-text {
+  color: hsl(53, 100%, 58%);
+  display: inline;
+}
+.ui--wrapper-desktop:after {
+  content: "" !important;
+  position: absolute !important;
+  background: url("/src/assets/images/line-decoration.svg") no-repeat center
+    center/cover !important;
+  opacity: 0.5 !important;
+  right: -44% !important;
+  bottom: -410px !important;
+  height: 100% !important;
+  width: 120% !important;
+  z-index: -4;
+  pointer-events: none !important;
+}
+.max-width {
+  max-width: 1330px;
+  margin-inline: auto;
+}
+
+/* switch theme */

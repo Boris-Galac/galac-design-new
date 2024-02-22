@@ -1,0 +1,84 @@
+/* infinite marquee */
+
+.infinite-slider {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  background-color: var(--black);
+  padding: 0.2rem;
+  gap: 2rem;
+  user-select: none;
+  width: 100%;
+  overflow: hidden;
+  left: 0;
+  right: 0;
+}
+.infinite-slider > * {
+  white-space: nowrap;
+}
+.infinite-slider__wrapper {
+  display: flex;
+  gap: 2em;
+}
+.slide-text {
+  color: var(--white);
+  text-transform: uppercase;
+  font-size: 18px;
+  font-style: italic;
+  font-weight: 500;
+  width: max-content;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.infinite-slider__wrapper {
+  animation: scroll-animation 5s linear infinite;
+}
+@keyframes scroll-animation {
+  from {
+    transform: translate(0);
+  }
+  to {
+    transform: translate(calc(-100% - 2rem));
+  }
+}
+@media (min-width: 1024px) {
+  .infinite-slider {
+    width: 100%;
+  }
+}
+
+/* tech marquee */
+
+.techs {
+  padding-block: 1rem;
+  background: url("/assets/images/overlay-tech.png") no-repeat center
+    center/cover;
+  background-attachment: fixed;
+  overflow-x: hidden;
+}
+.techs__img {
+  object-fit: contain;
+  aspect-ratio: 1;
+}
+.techs__marquee {
+  display: flex;
+  width: max-content;
+  white-space: nowrap;
+  gap: 3rem;
+  animation: marquee 40s linear infinite;
+}
+.techs__content {
+  position: relative;
+  display: flex;
+  gap: 3rem;
+  flex-shrink: 0;
+}
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-51%);
+  }
+}

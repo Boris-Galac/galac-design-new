@@ -1,0 +1,95 @@
+@import url("https://fonts.googleapis.com/css2?family=Jura:wght@300..700&display=swap");
+body {
+  color: var(--white);
+  font-family: "Jura", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+p {
+  line-height: 150%;
+}
+a {
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  color: var(--white);
+  font-size: clamp(18px, 7vw, 40px);
+}
+.link {
+  text-transform: uppercase;
+}
+.nav--link-headling {
+  font-size: clamp(1.1rem, 2vw, 1.8rem);
+}
+.nav--link-bigger-heading {
+  font-size: 1.5rem;
+  font-size: clamp(1.4rem, 3vw, 2.6rem);
+  font-weight: 600;
+}
+.h1-heading {
+  text-transform: uppercase;
+  font-size: 1.6rem;
+}
+.h2-heading {
+  text-transform: uppercase;
+  font-size: 1.1rem;
+}
+.see-web-heading {
+  font-size: 0.9rem;
+}
+.tab-heading {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+@media (min-width: 1024px) {
+  .tab-heading {
+    margin-bottom: 5rem;
+    text-align: center;
+  }
+  .wrapper-nav-header .h1-heading {
+    font-size: 2.5rem;
+    position: absolute;
+    transform: translateX(-50%);
+    left: 50%;
+  }
+}
+.cijene-heading {
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+}
+.proces-heading {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+.o-nama-tech-heading {
+  text-wrap: balance;
+  font-size: 1.4rem;
+  margin-left: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+.faq-heading {
+  text-wrap: balance;
+  font-size: 1.6rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+@media (min-width: 768px) {
+  .faq-heading {
+    margin-bottom: 3rem;
+  }
+}
+.kontakt .h2-heading {
+  font-size: 1.5rem;
+}
+.kontakt-socials .h2-heading {
+  margin-bottom: 1.5rem;
+}

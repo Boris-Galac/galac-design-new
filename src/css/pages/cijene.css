@@ -1,0 +1,69 @@
+.body-cijene {
+  padding: 0.5rem;
+}
+.cijene {
+  padding-block: 2rem;
+  padding-inline: 1rem;
+  padding-bottom: 4rem;
+}
+.cijene.ui-wrapper {
+  background-color: var(--low-white);
+}
+.cijene__inner-wrapper {
+  display: grid;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+.cijene.ui--wrapper-desktop::after {
+  opacity: 0.2 !important;
+}
+.cijene-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+.offer-card {
+  padding-block: 2rem;
+  padding-inline: 1rem;
+  width: min(100%, 521px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: 0.5s;
+}
+.offer-card:hover {
+  scale: 1.05;
+}
+.offer__list {
+  display: grid;
+  gap: 0.5rem;
+  margin-bottom: 3rem;
+}
+.offer__item {
+  line-height: 150%;
+}
+.price {
+  margin-inline: auto;
+  font-size: 1.5rem;
+  border-radius: 100vmax;
+  padding: 0.5rem 1rem;
+  border: 2px solid var(--white);
+  width: max-content;
+}
+.cijene__info {
+  display: flex;
+  align-items: flex-start;
+  padding: 1rem;
+  gap: 1rem;
+  max-width: 600px;
+  margin-inline: auto;
+}
+.cijene__info p {
+  line-height: 200%;
+}
+@media (min-width: 1024px) {
+  .cijene {
+    padding-inline: 2rem;
+  }
+}

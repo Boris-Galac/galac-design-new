@@ -1,0 +1,141 @@
+button {
+  background-color: transparent;
+  border: 0;
+}
+.back-to-home {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.layout-btn {
+  transition: 0.3s;
+  aspect-ratio: 1;
+  margin: auto;
+  background-color: var(--black);
+  border-radius: 13px;
+  outline: 1px solid rgb(51, 51, 249);
+  box-shadow: 0 0 0 5px rgb(0, 0, 0);
+  cursor: pointer;
+  display: none;
+}
+.layout-btn:hover {
+  background-color: rgb(31, 31, 31);
+  scale: 1.05;
+}
+.layout-btn.active {
+  display: block;
+}
+.layout-btn > img {
+  object-fit: contain;
+  aspect-ratio: 1;
+  width: 45px;
+  margin-right: 5px;
+  pointer-events: none;
+}
+.web-solution-btn {
+  display: flex;
+  justify-content: space-between;
+  padding-inline: 1.5rem;
+  align-items: center;
+  height: 72px;
+  width: 100%;
+  max-width: 500px;
+  transition: 0.2s;
+  cursor: pointer;
+}
+.web-solution-btn:hover {
+  background-color: var(--mid-white) !important;
+}
+.tab-btn {
+  cursor: pointer;
+  transition: 0.5s;
+}
+.tab-btn[data-active="true"] {
+  filter: drop-shadow(0 0 10px var(--white));
+}
+.tab-btn:hover {
+  scale: 1.2;
+}
+.usluge__tab:hover .tab-btn {
+  transition: 0.3s;
+  opacity: 0.3;
+}
+.usluge__tab .tab-btn:hover {
+  transition: 0.3s;
+  opacity: 1;
+}
+.offer-btn {
+  display: flex;
+  align-items: center;
+  padding-inline: 2rem;
+  padding-block: 1rem;
+  border-radius: 100vmax;
+  border: 1px solid rgba(255, 255, 255, 0.431);
+  background-color: hsla(202, 100%, 53%, 0.318);
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  color: var(--white);
+  font: inherit;
+  font-weight: 600;
+  gap: 0.7rem;
+  margin-block: 1.5rem;
+  margin-inline: auto;
+  transition: 0.25s;
+  cursor: pointer;
+  margin-top: auto;
+}
+.offer-btn:hover {
+  display: flex;
+  align-items: center;
+  padding-inline: 2rem;
+  padding-block: 1rem;
+  border-radius: 100vmax;
+  border: 1px solid rgba(255, 255, 255, 0.431);
+  background-color: hsla(202, 100%, 53%, 0.594);
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  color: var(--white);
+  font: inherit;
+  font-weight: 600;
+  gap: 0.7rem;
+  transition: 0.25s;
+  box-shadow: 0 0 1.5rem hsl(219, 95%, 55%);
+}
+.faq-btn {
+  cursor: pointer;
+  aspect-ratio: 1;
+  width: 1.5rem;
+  display: grid;
+  place-items: center;
+}
+.submit-btn {
+  border: 1px solid #fff;
+  padding: 0.8rem;
+  font: inherit;
+  font-weight: 900;
+  transition: 0.25s;
+  color: var(--white);
+  border-radius: 6px;
+  background: linear-gradient(to right, hsl(0, 0%, 0%), rgb(19, 19, 80));
+  cursor: pointer;
+}
+.submit-btn:hover {
+  background: linear-gradient(to right, hsl(228, 39%, 15%), rgb(36, 36, 141));
+}
+.switch-clr-theme {
+  cursor: pointer;
+  transition: 0.25s;
+}
+.switch-clr-theme:hover {
+  opacity: 0.5;
+  scale: 1.1;
+}
+.back-btn {
+  display: flex;
+  align-items: center;
+  transition: 0.2s;
+  gap: 5px;
+}
+.back-btn:hover {
+  opacity: 0.5;
+}

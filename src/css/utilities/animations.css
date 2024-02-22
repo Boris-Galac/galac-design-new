@@ -1,0 +1,17 @@
+/* from left opacity stagger */
+.hidden-left-stagger {
+  opacity: 0;
+  transform: translateX(-50%);
+}
+.hidden-left-stagger.active {
+  animation: active forwards 0.8s ease-out;
+}
+@keyframes active {
+  from {
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
