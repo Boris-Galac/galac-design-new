@@ -14,6 +14,7 @@
   border: 1px solid var(--border-mid-white);
   border-radius: 6px;
   overflow: hidden;
+  transition: 0.3s;
 }
 .ui-wrapper:before {
   content: "";
