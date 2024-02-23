@@ -76,47 +76,41 @@
   background-color: var(--effect-linear-2);
   position: absolute;
   border-radius: 50%;
-  width: 30rem;
+  width: 40vh;
   aspect-ratio: 1;
   filter: blur(200px);
-  animation: circle-1 40s linear infinite alternate;
+  animation: circle-1 25s linear infinite alternate;
 }
 @keyframes circle-1 {
   0% {
-    transform: translateX(30rem);
+    transform: translateX(30vw);
   }
   25% {
-    transform: translateY(30rem);
+    transform: translateY(30vw);
   }
   50% {
-    transform: translateX(-30rem);
+    transform: translateX(80vw);
   }
   100% {
-    transform: translateY(30rem);
+    transform: translateY(50vh);
   }
 }
 .circle-2 {
   z-index: 1;
-  background-color: hsla(348, 67%, 51%, 0.1);
+  background-color: var(--effect-linear-3);
   position: absolute;
   border-radius: 50%;
-  width: 120rem;
+  width: 60vw;
   aspect-ratio: 1;
-  filter: blur(50px);
-  animation: circle-2 30s linear infinite alternate;
+  filter: blur(100px);
+  animation: circle-2 20s linear infinite alternate;
 }
 @keyframes circle-2 {
   0% {
-    transform: translateY(50rem);
-  }
-  25% {
-    transform: translateX(-50rem);
-  }
-  50% {
-    transform: translateY(30rem);
+    transform: translateY(75vh);
   }
   100% {
-    transform: translateY(50rem);
+    transform: translateX(50vw);
   }
 }
 
@@ -182,5 +176,3 @@
   max-width: 1330px;
   margin-inline: auto;
 }
-
-/* switch theme */

@@ -335,6 +335,37 @@ if (window.location.href.includes("faq")) {
     });
   });
 }
+////// 💡💡💡💡💡💡 KONTAKT
+
+if (window.location.href.includes("kontakt")) {
+  // EMAIL CONSULTATION
+
+  document.getElementById("emailForm").addEventListener("submit", (e) => {
+    e.preventDefault(); // Spriječava slanje obrasca
+
+    // Dohvati uneseni e-mail korisnika
+    const userEmail = document.getElementById("userEmail").value;
+
+    // Provjeri ispravnost e-mail adrese
+    if (!isValidEmail(userEmail)) {
+      alert("Molimo unesite ispravnu e-mail adresu.");
+      return;
+    }
+
+    // Pošalji e-mail na određenu adresu
+    const emailBody = `Korisnikov e-mail: ${userEmail}`;
+    const mailtoLink = `mailto:boris.galac@gmail.com?subject=Novi e-mail&body=${encodeURIComponent(
+      emailBody
+    )}`;
+    window.location.href = mailtoLink;
+  });
+
+  // Funkcija za provjeru ispravnosti e-mail adrese
+  function isValidEmail(email) {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  }
+}
 
 //// 💡💡💡💡💡💡 GLOBALS
 

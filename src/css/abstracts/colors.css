@@ -12,11 +12,13 @@
   --border-white: hsla(0, 0%, 100%, 0.2);
   --effect-linear-1: hsl(240, 71%, 12%);
   --effect-linear-2: hsla(240, 67%, 51%, 0.9);
+  --effect-linear-3: hsla(348, 67%, 51%, 0.15);
   --overlay-clr: hsla(0, 0%, 0%, 0.8);
 }
 body.light-theme {
   --effect-linear-1: hsl(206, 53%, 82%);
   --effect-linear-2: hsla(240, 80%, 79%, 0.9);
+  --effect-linear-3: hsl(0, 0%, 100%);
   --mid-white: hsla(215, 85%, 19%, 0.23);
   --low-mid-white: hsla(215, 97%, 12%, 0.23);
   --low-white: hsla(241, 39%, 21%, 0.23);
