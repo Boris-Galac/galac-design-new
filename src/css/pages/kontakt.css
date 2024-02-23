@@ -6,6 +6,9 @@
   padding-top: 2rem;
   padding-bottom: 5rem;
 }
+.kontakt.ui-wrapper {
+  background-color: var(--low-white);
+}
 .kontakt-row {
   max-width: 1024px;
   margin-inline: auto;

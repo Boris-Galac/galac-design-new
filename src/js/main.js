@@ -1,5 +1,5 @@
 // SWIPER HOME PAGE
-var swiper = new Swiper(".mySwiper", {
+var swiper = new Swiper(".cube", {
   effect: "cube",
   loop: true,
   speed: 1000,
@@ -30,6 +30,24 @@ var swiper = new Swiper(".mySwiper-portfolio", {
     prevEl: ".swiper-button-prev",
   },
 });
+
+//// 💡💡💡💡💡💡 INDEX
+
+// SPLASH SCREEN
+
+if (window.location.href.length === 22) {
+  document.addEventListener("DOMContentLoaded", function () {
+    if (window.location.href.length === 22) {
+      document
+        .querySelector(".splashscreen")
+        .setAttribute("data-active", "true");
+    } else {
+      document
+        .querySelector(".splashScreen")
+        .setAttribute("data-active", "false");
+    }
+  });
+}
 
 //// 💡💡💡💡💡💡 GRAFICKI DIZAJN
 
@@ -218,24 +236,6 @@ if (window.location.href.includes("graficki-dizajn")) {
     document.body.append(newImgWindow);
   }
 }
-///////// OVERLAY FUNCTION
-
-function createOverlay(element) {
-  let overlay = document.createElement("div");
-  overlay.setAttribute("class", "overlay overlay--darker");
-  overlay.setAttribute("data-visible", "true");
-  overlay.setAttribute("aria-expanded", "true");
-  overlay.append(element);
-  document.body.append(overlay);
-  overlay.addEventListener("click", (e) => {
-    if (e.target !== e.currentTarget) return;
-
-    overlay.setAttribute("data-visible", "false");
-    overlay.addEventListener("animationend", (e) => {
-      overlay.remove();
-    });
-  });
-}
 
 ////// 💡💡💡💡💡💡 USLUGE
 
@@ -386,3 +386,22 @@ themeToggleBtn.addEventListener("click", (e) => {
     localStorage.removeItem("currentTheme");
   }
 });
+
+///////// OVERLAY FUNCTION
+
+function createOverlay(element) {
+  let overlay = document.createElement("div");
+  overlay.setAttribute("class", "overlay overlay--darker");
+  overlay.setAttribute("data-visible", "true");
+  overlay.setAttribute("aria-expanded", "true");
+  overlay.append(element);
+  document.body.append(overlay);
+  overlay.addEventListener("click", (e) => {
+    if (e.target !== e.currentTarget) return;
+
+    overlay.setAttribute("data-visible", "false");
+    overlay.addEventListener("animationend", (e) => {
+      overlay.remove();
+    });
+  });
+}

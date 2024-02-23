@@ -22,3 +22,9 @@
     transform: translateX(-43%);
   }
 }
+/* effects cube home page */
+
+.cube .swiper-slide img {
+  height: 100%;
+  width: 100%;
+}

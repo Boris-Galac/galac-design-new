@@ -32,7 +32,8 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
-    <link rel="stylesheet" href="dist/style.css" />
+    <link rel="stylesheet" href="/src/css/style.css" />
+    <!-- <link rel="stylesheet" href="dist/style.css" /> -->
     <script defer src="/src/js/main.js"></script>
   </head>
   <body class="body body-home">
@@ -69,142 +70,183 @@
           </button>
         </div>
       </div>
-      <nav
-        class="primary-nav primary-nav--width"
-        aria-label="primary navigation"
-      >
-        <div class="primary-nav__wrapper">
+      <nav class="nav primary-nav--width" aria-label="primary navigation">
+        <div class="nav__primary">
           <a
-            class="link nav--link ui-wrapper home-link-ui-wrapper"
+            class="nav__link nav__primary-link ui-wrapper home-link-ui-wrapper"
             href="web-portfolio.html"
           >
-            <span class="nav--link-headling nav--link-bigger-heading"
+            <span class="nav--link-heading nav--link-bigger-heading"
               >web portfolio</span
             >
             <img
-              class="icon"
+              class="nav__primary-link--icon"
               src="/src/assets/icons/web-icon.svg"
               alt="web portfolio icon"
             />
           </a>
           <a
-            class="link nav--link ui-wrapper home-link-ui-wrapper"
+            class="nav__link nav__primary-link ui-wrapper home-link-ui-wrapper"
             href="graficki-dizajn.html"
           >
-            <span class="nav--link-headling nav--link-bigger-heading"
+            <span class="nav--link-heading nav--link-bigger-heading"
               >grafički dizajn</span
             >
             <img
-              class="icon"
+              class="nav__primary-link--icon"
               src="/src/assets/icons/graphic-icon.svg"
               alt="grahic design portfolio icon"
             />
           </a>
-          <a class="link nav--link ui-wrapper" href="usluge.html">
-            <span class="nav--link-headling">usluge</span>
-            <img
-              class="icon"
-              src="/src/assets/icons/offer-icon.svg"
-              alt="offers of galac design icon"
-            />
-          </a>
-          <a class="link nav--link ui-wrapper" href="cijene.html">
-            <span class="nav--link-headling">cijene/paketi </span>
-            <img
-              class="icon"
-              src="/src/assets/icons/subscription-icon.svg"
-              alt="subscritpion portfolio icon"
-            />
-          </a>
-          <a class="link nav--link ui-wrapper" href="o-nama.html">
-            <span class="nav--link-headling">o nama </span>
-            <img
-              class="icon"
-              src="/src/assets/icons/galac-design-logo-white.svg"
-              alt="galac design white portfolio icon"
-            />
-          </a>
-          <a class="link nav--link ui-wrapper" href="faq.html">
-            <span class="nav--link-headling">faq</span>
-            <img
-              class="icon"
-              src="/src/assets/icons/faq-icon.svg"
-              alt="frequently asked question icon"
-            />
-          </a>
-          <a class="link nav--link ui-wrapper" href="kontakt.html">
-            <span class="nav--link-headling">kontakt</span>
-            <img
-              class="icon"
-              src="/src/assets/icons/contact-icon.svg"
-              alt="contact portfolio icon"
-            />
-          </a>
         </div>
-        <div class="ad" aria-label="advertisement">
-          <!-- swiper slide -->
-          <div class="swiper mySwiper">
-            <!-- Additional required wrapper -->
-            <div class="swiper-wrapper">
-              <picture class="ad-wrapper swiper-slide">
-                <source
-                  media="(min-width:1063px)"
-                  srcset="/src/assets/images/ad/graficki-dizajn-ad-5.png"
-                />
-                <source
-                  media="(min-width:755px)"
-                  srcset="/src/assets/images/ad/graficki-dizajn-ad-4.png"
-                />
-                <source
-                  media="(min-width:490px)"
-                  srcset="/src/assets/images/ad/graficki-dizajn-ad-3.png"
-                />
+        <div class="nav__inner-wrapper">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a
+                class="nav__link nav__secondary-link ui-wrapper"
+                href="usluge.html"
+              >
+                <span class="nav--link-heading">usluge</span>
                 <img
-                  src="/src/assets/images/ad/graficki-dizajn-ad-1.png"
-                  alt="graphic design image"
+                  class="icon nav__link-icon"
+                  src="/src/assets/icons/offer-icon.svg"
+                  alt="offers of galac design icon"
                 />
-              </picture>
-              <picture class="ad-wrapper swiper-slide">
-                <source
-                  media="(min-width:1063px)"
-                  srcset="/src/assets/images/ad/socials-ad-4.png"
-                />
-                <source
-                  media="(min-width:755px)"
-                  srcset="/src/assets/images/ad/socials-ad-3.png"
-                />
-                <source
-                  media="(min-width:490px)"
-                  srcset="/src/assets/images/ad/socials-ad-2.png"
-                />
+              </a>
+            </li>
+            <li class="nav__item">
+              <a
+                class="nav__link nav__secondary-link ui-wrapper"
+                href="cijene.html"
+              >
+                <span class="nav--link-heading">cijene/paketi </span>
                 <img
-                  src="/src/assets/images/ad/socials-ad-1.png"
-                  alt="socials design image"
+                  class="nav__link-icon"
+                  src="/src/assets/icons/subscription-icon.svg"
+                  alt="subscritpion portfolio icon"
                 />
-              </picture>
-              <picture class="ad-wrapper swiper-slide">
-                <source
-                  media="(min-width:1063px)"
-                  srcset="/src/assets/images/ad/website-ad-4.png"
-                />
-                <source
-                  media="(min-width:755px)"
-                  srcset="/src/assets/images/ad/website-ad-3.png"
-                />
-                <source
-                  media="(min-width:490px)"
-                  srcset="/src/assets/images/ad/website-ad-2.png"
-                />
+              </a>
+            </li>
+            <li class="nav__item">
+              <a
+                class="nav__link nav__secondary-link ui-wrapper"
+                href="o-nama.html"
+              >
+                <span class="nav--link-heading">o nama </span>
                 <img
-                  src="/src/assets/images/ad/website-ad-1.png"
-                  alt="website design image"
+                  class="icon nav__link-icon nav__link-icon--o-nama"
+                  src="/src/assets/icons/galac-design-logo-white.svg"
+                  alt="galac design white portfolio icon"
                 />
-              </picture>
+              </a>
+            </li>
+            <li class="nav__item">
+              <a
+                class="nav__link nav__secondary-link ui-wrapper"
+                href="faq.html"
+              >
+                <span class="nav--link-heading">faq</span>
+                <img
+                  class="icon nav__link-icon"
+                  src="/src/assets/icons/faq-icon.svg"
+                  alt="frequently asked question icon"
+                />
+              </a>
+            </li>
+            <li class="nav__item">
+              <a
+                class="nav__link nav__secondary-link ui-wrapper"
+                href="kontakt.html"
+              >
+                <span class="nav--link-heading">kontakt</span>
+                <img
+                  class="icon nav__link-icon"
+                  src="/src/assets/icons/contact-icon.svg"
+                  alt="contact portfolio icon"
+                />
+              </a>
+            </li>
+          </ul>
+          <div class="ad" aria-label="advertisement">
+            <div class="swiper cube">
+              <div class="swiper-wrapper">
+                <picture class="swiper-slide">
+                  <source
+                    media="(min-width:1494px)"
+                    srcset="/src/assets/images/ad/graficki-dizajn-ad-7.png"
+                  />
+                  <source
+                    media="(min-width:1200px)"
+                    srcset="/src/assets/images/ad/graficki-dizajn-ad-6.png"
+                  />
+                  <source
+                    media="(min-width:755px)"
+                    srcset="/src/assets/images/ad/graficki-dizajn-ad-3.png"
+                  />
+                  <source
+                    media="(min-width:490px)"
+                    srcset="/src/assets/images/ad/graficki-dizajn-ad-2.png"
+                  />
+                  <img
+                    src="/src/assets/images/ad/graficki-dizajn-ad-1.png"
+                    alt="graphic design image"
+                  />
+                </picture>
+                <picture class="swiper-slide">
+                  <source
+                    media="(min-width:1494px)"
+                    srcset="/src/assets/images/ad/socials-ad-7.png"
+                  />
+                  <source
+                    media="(min-width:1200px)"
+                    srcset="/src/assets/images/ad/socials-ad-6.png"
+                  />
+                  <source
+                    media="(min-width:1063px)"
+                    srcset="/src/assets/images/ad/socials-ad-4.png"
+                  />
+                  <source
+                    media="(min-width:755px)"
+                    srcset="/src/assets/images/ad/socials-ad-3.png"
+                  />
+                  <source
+                    media="(min-width:490px)"
+                    srcset="/src/assets/images/ad/socials-ad-2.png"
+                  />
+                  <img
+                    src="/src/assets/images/ad/socials-ad-1.png"
+                    alt="socials design image"
+                  />
+                </picture>
+                <picture class="swiper-slide">
+                  <source
+                    media="(min-width:1494px)"
+                    srcset="/src/assets/images/ad/website-ad-7.png"
+                  />
+                  <source
+                    media="(min-width:1200px)"
+                    srcset="/src/assets/images/ad/website-ad-6.png"
+                  />
+                  <source
+                    media="(min-width:1063px)"
+                    srcset="/src/assets/images/ad/website-ad-4.png"
+                  />
+                  <source
+                    media="(min-width:755px)"
+                    srcset="/src/assets/images/ad/website-ad-3.png"
+                  />
+                  <source
+                    media="(min-width:490px)"
+                    srcset="/src/assets/images/ad/website-ad-2.png"
+                  />
+                  <img
+                    src="/src/assets/images/ad/website-ad-1.png"
+                    alt="website design image"
+                  />
+                </picture>
+              </div>
+              <div class="swiper-pagination"></div>
             </div>
-            <!-- If we need pagination -->
-            <div class="swiper-pagination"></div>
-            <!-- If we need scrollbar -->
-            <div class="swiper-scrollbar"></div>
           </div>
         </div>
       </nav>
@@ -294,6 +336,20 @@
           <span class="slide-text slide-text-6">banneri</span>
         </li>
       </ul>
+    </div>
+    <div class="splashscreen" data-active="false">
+      <div class="splashscreen-wrapper">
+        <img
+          class="splashscreen-logo"
+          src="/src/assets/icons/logo.svg"
+          alt="galac-design logo"
+        />
+        <div class="splashscreen-msg">
+          <span class="splashscreen-word">SIMPLE.</span>
+          <span class="splashscreen-word">MODERN.</span>
+          <span class="splashscreen-word">FAST.</span>
+        </div>
+      </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   </body>
