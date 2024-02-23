@@ -58,6 +58,11 @@
   gap: 1rem;
   max-width: 600px;
   margin-inline: auto;
+  margin-bottom: 2rem;
+}
+.cijene__bottom-wrapper {
+  width: min(100%, 30rem);
+  margin-inline: auto;
 }
 .cijene__info p {
   line-height: 200%;
