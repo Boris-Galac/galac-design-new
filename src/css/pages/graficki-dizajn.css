@@ -17,13 +17,26 @@
 .grafika__projects-btn-wrapper {
   display: grid;
   width: 100%;
-  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
   gap: 1rem;
+}
+.grafika__projects-inner-wrapper
+  > .layout-btn[data-active="true"]
+  + .grafika__projects-btn-wrapper {
+  grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
+}
+.grafika__projects-inner-wrapper
+  > .layout-btn[data-active="false"]
+  + .grafika__projects-btn-wrapper {
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
 }
 @media (min-width: 600px) {
   .grafika__projects-inner-wrapper {
     display: flex;
     flex-direction: row;
     align-items: stretch;
+  }
+  .grafika__projects-btn-wrapper {
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
   }
 }
