@@ -10,20 +10,21 @@ button {
 .layout-btn {
   transition: 0.3s;
   aspect-ratio: 1;
-  margin: auto;
-  background-color: var(--black);
+  background-color: rgba(0, 0, 0, 0.534);
   border-radius: 13px;
   outline: 1px solid rgb(51, 51, 249);
-  box-shadow: 0 0 0 5px rgb(0, 0, 0);
+  padding: 0.5rem;
   cursor: pointer;
-  display: none;
 }
 .layout-btn:hover {
   background-color: rgb(31, 31, 31);
   scale: 1.05;
 }
-.layout-btn.active {
+.layout-btn[data-active="true"] {
   display: block;
+}
+.layout-btn[data-active="false"] {
+  display: none;
 }
 .layout-btn > img {
   object-fit: contain;
@@ -31,6 +32,23 @@ button {
   width: 45px;
   margin-right: 5px;
   pointer-events: none;
+}
+.project-btn {
+  padding: 0.25rem;
+  aspect-ratio: 1;
+  min-width: 50px;
+  width: min(100%, 140px);
+  background-color: hsla(0, 0%, 0%, 0.501);
+  border-radius: 1rem;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.project-btn > img {
+  border-radius: 5px;
+}
+.project-btn:hover {
+  scale: 1.1;
+  box-shadow: 0 0 1rem hsla(240, 100%, 72%, 0.424);
 }
 .web-solution-btn {
   display: flex;

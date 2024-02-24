@@ -1,13 +1,11 @@
 .header-home {
-  height: 96%;
+  height: 95%;
   /* padding-bottom: 0.2rem; */
 }
 .upper-header {
   display: flex;
   justify-content: space-between;
   width: 100%;
-  grid-row: 1;
-  grid-column: 1/-1;
   margin-bottom: 0.5rem;
 }
 .wrapper-nav-header {
@@ -25,10 +23,6 @@
   border-radius: 6px;
   overflow: hidden;
   padding-inline: 0.5rem;
-}
-.nav {
-}
-.nav__wrapper {
 }
 .logo-wrapper {
   margin-block: auto;
@@ -50,11 +44,6 @@
   display: flex;
   gap: 5px;
 }
-/* .nav__wrapper .ui-wrapper {
-  padding: 1rem;
-  position: relative;
-} */
-
 .nav__wrapper .icon {
   position: absolute;
   right: 4%;
@@ -100,7 +89,7 @@
   }
 }
 
-/* sdfsdfsd */
+/* general layout */
 
 .nav {
   height: 90%;
@@ -114,6 +103,7 @@
   grid-column: 1/-1;
   grid-row: 1;
   gap: 0.5rem;
+  /* min-height: 150px; */
 }
 .nav__primary > * {
   flex: 1;
@@ -133,16 +123,18 @@
 .nav__list {
   order: 2;
   width: 100%;
-  display: grid;
-  row-gap: 0.5rem;
-  grid-template-rows: repeat(5, 1fr);
+  /* display: grid; */
+  gap: 0.5rem;
+  /* grid-template-rows: 1fr 1fr 1fr 1fr 1fr; */
+  display: flex;
+  flex-direction: column;
 }
 .nav__link {
   position: relative;
   text-transform: uppercase;
   font-size: 20px;
   padding: 1rem;
-  height: 100%;
+  /* height: 100%; */
 }
 .nav__link.ui-wrapper:hover {
   background-color: var(--mid-white-hover);
@@ -163,13 +155,15 @@
 .nav__item,
 .nav__link {
   width: 100%;
+  flex: 1;
+  height: 100%;
 }
 /* primary nav links */
 .nav__primary-link--icon {
   position: absolute;
   right: 1rem;
   bottom: 1rem;
-  width: 100%;
+  /* width: 100%; */
   max-width: 66px;
 }
 .nav__primary-link.ui-wrapper::after {

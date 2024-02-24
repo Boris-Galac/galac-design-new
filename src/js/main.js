@@ -1,240 +1,64 @@
-// SWIPER HOME PAGE
-var swiper = new Swiper(".cube", {
-  effect: "cube",
-  loop: true,
-  speed: 1000,
-  autoplay: {
-    delay: 2500,
-    disableOnInteraction: false,
-  },
-  grabCursor: true,
-  cubeEffect: {
-    shadowOffset: 20,
-    shadowScale: 0.94,
-  },
-  pagination: {
-    el: ".swiper-pagination",
-  },
+document.addEventListener("DOMContentLoaded", () => {
+  if (window.location.href.length === 22) {
+    document.querySelector(".splashscreen").setAttribute("data-active", "true");
+    setTimeout(() => {
+      document.querySelector(".splashscreen").remove();
+    }, 4000);
+  } else {
+    return;
+  }
 });
-// SWIPER GRAFICKI DIZAJN PAGE
-var swiper = new Swiper(".mySwiper-portfolio", {
-  effect: "flip",
-  grabCursor: true,
-  loop: true,
-  speed: 1000,
-  pagination: {
-    el: ".swiper-pagination",
-  },
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-});
-
 //// 💡💡💡💡💡💡 INDEX
 
-// SPLASH SCREEN
-
-if (window.location.href.length === 22) {
-  document.addEventListener("DOMContentLoaded", function () {
-    if (window.location.href.length === 22) {
-      document
-        .querySelector(".splashscreen")
-        .setAttribute("data-active", "true");
-    } else {
-      document
-        .querySelector(".splashScreen")
-        .setAttribute("data-active", "false");
-    }
+if (window.location.href.length === 24 || window.location.href.length === 34) {
+  // SPLASH SCREEN
+  var swiper = new Swiper(".cube", {
+    effect: "cube",
+    loop: true,
+    speed: 1000,
+    autoplay: {
+      delay: 2500,
+      disableOnInteraction: false,
+    },
+    grabCursor: true,
+    cubeEffect: {
+      shadowOffset: 20,
+      shadowScale: 0.94,
+    },
+    pagination: {
+      el: ".swiper-pagination",
+    },
   });
 }
 
 //// 💡💡💡💡💡💡 GRAFICKI DIZAJN
 
-// GRAFICKI DIZAJN
 if (window.location.href.includes("graficki-dizajn")) {
-  let currentImageIndex = -1;
+  // baguuette library
+  baguetteBox.run(".gallery");
 
-  function galleryFunction() {
-    const galleryImages = document.querySelectorAll(".project__gallery > img");
-
-    if (galleryImages) {
-      galleryImages.forEach((img, index) => {
-        img.addEventListener("click", () => {
-          currentImageIndex = index;
-          createOverlay();
-          displayCurrentImage();
-          createGalleryBtns();
-        });
-      });
-    }
-
-    function changeImg(changeDir) {
-      const newImg = document.getElementById("current-img");
-      if (newImg) {
-        // Remove any existing classes
-        newImg.classList.remove("right-image", "left-image");
-      }
-
-      currentImageIndex += changeDir;
-
-      if (currentImageIndex < 0) {
-        currentImageIndex = galleryImages.length - 1;
-      } else if (currentImageIndex >= galleryImages.length) {
-        currentImageIndex = 0;
-      }
-
-      // Determine the class to add
-      const classToAdd = changeDir === 1 ? "right-image" : "left-image";
-
-      displayCurrentImage(classToAdd);
-    }
-    const newImg = document.createElement("img");
-
-    function displayCurrentImage(classToAdd) {
-      const currentImg = document.getElementById("current-img");
-
-      if (currentImg) {
-        currentImg.remove();
-      }
-
-      newImg.setAttribute("class", `current-gallery-img ${classToAdd}`);
-      newImg.setAttribute("id", "current-img");
-      newImg.setAttribute("src", galleryImages[currentImageIndex].src);
-      newImgWindow.append(newImg);
-    }
-
-    function createGalleryBtns() {
-      // prev btn
-      const prevBtn = document.createElement("button");
-      prevBtn.setAttribute("class", "gallery-btn gallery-btn--prev");
-      prevBtn.addEventListener("click", () => {
-        changeImg(-1);
-      });
-      const prevImgIcon = document.createElement("i");
-      prevImgIcon.setAttribute("class", "fa-solid fa-chevron-left");
-      prevBtn.append(prevImgIcon);
-      newImgWindow.append(prevBtn);
-
-      // next btn
-      const nextBtn = document.createElement("button");
-      nextBtn.setAttribute("class", "gallery-btn gallery-btn--next ");
-      nextBtn.addEventListener("click", (e) => {
-        changeImg(1);
-      });
-      const nextImgIcon = document.createElement("i");
-      nextImgIcon.setAttribute("class", "fa-solid fa-chevron-right");
-      nextBtn.append(nextImgIcon);
-      newImgWindow.append(nextBtn);
-    }
-  }
-
-  // OPEN THE PROJECT & ASIDE BAR
+  const projects = document.querySelectorAll(".graph-project");
+  const projectBtns = document.querySelectorAll(".project-btn");
   const layoutBtn = document.querySelector(".layout-btn");
 
-  const asideBarProjectWrapper = document.querySelector(
-    ".grafika__projects-wrapper"
-  );
-  const asideBarProjects = document.querySelector(
-    ".grafika__projects-inner-wrapper"
-  );
-  const projectsWrapper = document.querySelector(".projects");
-  const projectsBtns = document.querySelectorAll(".project-btn");
-
-  projectsBtns.forEach((btn) => {
-    btn.addEventListener("click", (e) => {
-      const projectBtn = btn.dataset.project;
-      const filteredProjectHrv = projects.filter(
-        (obj) => obj.id === projectBtn
-      );
-      const imgs = filteredProjectHrv[0].images.map((img) => {
-        return `<img src="src/assets/images/project-imgs/img (${img}).png" alt="image">`;
-      });
-      const project = filteredProjectHrv
-        .map((obj) => {
-          return `
-              <figure class="graph-project right-image">
-              <div class="project__header">
-              <div class="project__col project__col--first-col">
-              <span class="project__label">Ime projekta</span>
-              <h2 class="project__description project__title--main-heading">${
-                obj.nameOfProject
-              }</h2>
-              </div>
-              <div class="project__col">
-              <span class="project__label">Opis projekta</span>
-              <p class="project__description project__description--paragraph">${
-                obj.projectDescription
-              }</p>
-              </div>
-              <div class="project__col">
-              <span class="project__label">Tip projekta</span>
-              <h2 class="project__description project__description--brand-heading">${
-                obj.typeOfProject
-              }</h2>
-              </div>
-              <div class="project__col">
-              <span class="project__label">Korištene tehnologije</span>
-              <h2 class="project__description project__description__last-col"><img src="src/assets/images/illustrator-tech.png" alt="adobe photoshop"><img src="src/assets/images/ps-tech.png" alt="adobe photoshop">
-              </div>
-              </div>
-              <div class="project__content">
-              <div class="project__gallery">
-              ${imgs.map((img) => img.replace(/,/g, "")).join("")}
-              </div>
-              </div>
-              </figure>
-            `;
-        })
-        .join("");
-
-      projectsWrapper.setAttribute("data-opened", "true");
-      projectsWrapper.innerHTML = project;
-      galleryFunction();
-
-      if (
-        !asideBarProjectWrapper.classList.contains("opened-project-layout") &&
-        !asideBarProjects.classList.contains("aside-projects") &&
-        !layoutBtn.classList.contains("active")
-      ) {
-        asideBarProjectWrapper.classList.add("opened-project-layout");
-        asideBarProjects.classList.add("aside-projects");
-        layoutBtn.classList.add("active");
-      }
-    });
-  });
-
-  // CHANGE LAYOUT
   layoutBtn.addEventListener("click", (e) => {
-    if (
-      asideBarProjectWrapper.classList.contains("opened-project-layout") &&
-      asideBarProjects.classList.contains("aside-projects") &&
-      layoutBtn.classList.contains("active")
-    ) {
-      asideBarProjectWrapper.classList.remove("opened-project-layout");
-      asideBarProjects.classList.remove("aside-projects");
-      layoutBtn.classList.remove("active");
-    }
-    window.scrollTo({ top: 0, behavior: "smooth" });
-    if (projectsWrapper.hasChildNodes()) {
-      projectsWrapper.firstElementChild.remove();
-    }
-    projectsWrapper.setAttribute("data-opened", "false");
-  });
-
-  function createOverlay() {
-    ////////// create overlay for curr img
-    newImgWindow = document.createElement("div");
-    newImgWindow.setAttribute("class", "overlay-image");
-
-    ////////// when clicks overlay close img
-    newImgWindow.addEventListener("click", (e) => {
-      if (e.target === e.currentTarget) {
-        e.currentTarget.remove();
-      }
+    projects.forEach((project) => {
+      project.setAttribute("data-active", "false");
+      layoutBtn.setAttribute("data-active", "false");
     });
-    document.body.append(newImgWindow);
-  }
+  });
+  projectBtns.forEach((btn) => {
+    // layoutBtn.addEventListener("click", (e) => {});
+    btn.addEventListener("click", (e) => {
+      projects.forEach((project) => {
+        project.setAttribute("data-active", "false");
+        if (btn.dataset.project === project.id) {
+          layoutBtn.setAttribute("data-active", "true");
+          project.setAttribute("data-active", "true");
+        }
+      });
+    });
+  });
 }
 
 ////// 💡💡💡💡💡💡 USLUGE
@@ -283,7 +107,7 @@ if (window.location.href.includes("usluge")) {
   });
 }
 
-////// 💡💡💡💡💡💡 USLUGE
+////// 💡💡💡💡💡💡 CIJENE
 
 if (window.location.href.includes("cijene")) {
   // TAB WEB SOLUTIONS MODALS
@@ -365,6 +189,21 @@ if (window.location.href.includes("kontakt")) {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return emailRegex.test(email);
   }
+}
+////// 💡💡💡💡💡💡 WEB PORTFOLIO
+
+if (window.location.href.includes("web-portfolio")) {
+  // swiper slider
+  var swiper = new Swiper(".mySwiper-portfolio", {
+    slidesPerView: 1,
+    spaceBetween: 30,
+    loop: true,
+    speed: 1000,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
 }
 
 //// 💡💡💡💡💡💡 GLOBALS
