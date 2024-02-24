@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 //// 💡💡💡💡💡💡 INDEX
 
-if (window.location.href.length === 24 || window.location.href.length === 34) {
+if (window.location.href.length === 22 || window.location.href.length === 32) {
   // SPLASH SCREEN
   var swiper = new Swiper(".cube", {
     effect: "cube",
