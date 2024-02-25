@@ -67,6 +67,9 @@
 .cijene__info p {
   line-height: 200%;
 }
+.info-web-shop {
+  padding: 10px;
+}
 @media (min-width: 1024px) {
   .cijene {
     padding-inline: 2rem;

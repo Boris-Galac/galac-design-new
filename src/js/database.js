@@ -80,6 +80,10 @@ const paketi = [
   },
   {
     id: "shop",
-    text: `<h3 class="paketi-modal-heading">Web shop stranica</h3><p> fokusirala bi se na osnovne aspekte kao što su dizajniranje korisničkog sučelja, implementacija sigurnog sustava plaćanja, organizacija inventara, kategorije proizvoda/usluga, postavljanje sustava za upravljanje narudžbama i isporukom, te osnovnu optimizaciju za tražilice. Ova ponuda bi se koncentrirala na pružanje funkcionalnog i dobrog web shopa koji omogućuje korisnicima jednostavno pregledavanje i kupovinu proizvoda/usluga.</p>`,
+    text: `<h3 class="paketi-modal-heading">Web shop stranica</h3><p> fokusirala bi se na osnovne aspekte kao što su dizajniranje korisničkog sučelja, implementacija sigurnog sustava plaćanja, organizacija inventara, kategorije proizvoda/usluga, postavljanje sustava za upravljanje narudžbama i isporukom, te osnovnu optimizaciju za tražilice. Ova ponuda bi se koncentrirala na pružanje funkcionalnog i dobrog web shopa koji omogućuje korisnicima jednostavno pregledavanje i kupovinu proizvoda/usluga.</p> <br><br>
+    <p class="info-web-shop ui-wrapper-1">
+    Cjenovno " 899,00€ + " znači da je 899,00€ početna cijena s kojom krećemo u izradu web shopa, te da po dogovoru i potrebama kupca budžet može ići znatno više, sve ovisi o veličini webshopa.
+    </p>
+    `,
   },
 ];
