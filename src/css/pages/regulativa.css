@@ -1,0 +1,21 @@
+.body-regulativa {
+  padding: 0.5rem;
+}
+.regulativa {
+  display: grid;
+  gap: 2rem;
+  padding-inline: 5vw;
+  padding-block: 1rem;
+}
+.regulativa h4 {
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+.regulativa-h2-heading {
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+}
+.regulativa ul {
+  display: grid;
+  gap: 0.5rem;
+}
