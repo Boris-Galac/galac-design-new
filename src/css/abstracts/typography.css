@@ -62,6 +62,7 @@ a {
     position: absolute;
     transform: translateX(-50%);
     left: 50%;
+    width: max-content;
   }
   .h1--heading--regulativa {
     width: max-content;
