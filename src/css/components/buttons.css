@@ -157,3 +157,21 @@ button {
 .back-btn:hover {
   opacity: 0.5;
 }
+.call-now-btn {
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding-block: 0.3rem;
+  padding-inline: 1.2rem;
+  outline: 1px solid rgb(163, 246, 140);
+  border-radius: 100vmax;
+  background: hsla(110, 69%, 35%, 0.674);
+  margin-left: auto;
+  transition: 0.2s;
+}
+.call-now-btn:hover {
+  border-radius: 100vmax;
+  background: hsla(110, 69%, 35%, 0.9);
+  box-shadow: 0 0 1rem lime;
+}
