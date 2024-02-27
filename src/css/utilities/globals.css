@@ -176,3 +176,10 @@
   max-width: 1330px;
   margin-inline: auto;
 }
+/* swtich theme */
+.clr-theme-icon[data-active="false"] {
+  display: none;
+}
+.clr-theme-icon[data-active="true"] {
+  display: grid;
+}

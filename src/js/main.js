@@ -250,9 +250,25 @@ if (currentTheme) {
 
 themeToggleBtn.addEventListener("click", (e) => {
   bodyElement.classList.toggle("light-theme");
+  document
+    .querySelectorAll(".clr-theme-icon")
+    .forEach((clrIcon) => clrIcon.setAttribute("data-active", "false"));
+
   if (bodyElement.classList.contains("light-theme")) {
+    document
+      .querySelector('.clr-theme-icon[data-id="light"]')
+      .setAttribute("data-active", "true");
+    document
+      .querySelector('.clr-theme-icon[data-id="dark"]')
+      .setAttribute("data-active", "false");
     localStorage.setItem("currentTheme", "themeActive");
   } else {
+    document
+      .querySelector('.clr-theme-icon[data-id="light"]')
+      .setAttribute("data-active", "false");
+    document
+      .querySelector('.clr-theme-icon[data-id="dark"]')
+      .setAttribute("data-active", "true");
     localStorage.removeItem("currentTheme");
   }
 });
