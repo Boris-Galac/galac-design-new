@@ -143,6 +143,7 @@ button {
 .switch-clr-theme {
   cursor: pointer;
   transition: 0.25s;
+  margin-left: 7px;
 }
 .switch-clr-theme:hover {
   opacity: 0.5;
@@ -174,4 +175,12 @@ button {
   border-radius: 100vmax;
   background: hsla(110, 69%, 35%, 0.9);
   box-shadow: 0 0 1rem lime;
+}
+@media (min-width: 1024px) {
+  .switch-clr-theme {
+    margin-left: 14px;
+  }
+  .switch-clr-theme img {
+    pointer-events: none;
+  }
 }

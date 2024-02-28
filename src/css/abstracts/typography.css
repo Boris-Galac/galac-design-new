@@ -36,7 +36,7 @@ a {
 .h1-heading {
   text-transform: uppercase;
   font-size: 1.6rem;
-  width: min-content;
+  width: max-content;
 }
 .h1--heading--regulativa {
   width: min-content;
