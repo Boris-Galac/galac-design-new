@@ -11,9 +11,9 @@ document.addEventListener("DOMContentLoaded", () => {
 //// 💡💡💡💡💡💡 INDEX
 
 if (window.location.href.length === 22 || window.location.href.length === 32) {
-  // SPLASH SCREEN
+  // HOME SCREEN BANNER
   var swiper = new Swiper(".cube", {
-    effect: "cube",
+    // effect: "cube",
     loop: true,
     speed: 1000,
     autoplay: {
