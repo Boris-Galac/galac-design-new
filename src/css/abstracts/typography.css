@@ -52,22 +52,7 @@ a {
   font-size: 2rem;
   margin-bottom: 2rem;
 }
-@media (min-width: 1024px) {
-  .tab-heading {
-    margin-bottom: 5rem;
-    text-align: center;
-  }
-  .wrapper-nav-header .h1-heading {
-    font-size: 2.5rem;
-    position: absolute;
-    transform: translateX(-50%);
-    left: 50%;
-    width: max-content;
-  }
-  .h1--heading--regulativa {
-    width: max-content;
-  }
-}
+
 .cijene-heading {
   text-transform: uppercase;
   text-align: center;
@@ -90,14 +75,76 @@ a {
   margin-bottom: 1.5rem;
   text-align: center;
 }
-@media (min-width: 768px) {
-  .faq-heading {
-    margin-bottom: 3rem;
-  }
-}
 .kontakt .h2-heading {
   font-size: 1.5rem;
 }
 .kontakt-socials .h2-heading {
   margin-bottom: 1.5rem;
+}
+.cijene-tab-heading {
+  position: relative;
+  margin-inline: auto;
+  font-size: 1.7rem;
+  margin-bottom: 2rem;
+}
+.cijene-tab-heading::after {
+  content: "";
+  position: absolute;
+  background-color: var(--white);
+  height: 1px;
+  width: 30%;
+  display: block;
+  bottom: -5px;
+  left: 0;
+  right: 0;
+  margin-inline: auto;
+}
+.tab-btn {
+  position: relative;
+}
+.tab-btn-heading {
+  bottom: -31px;
+  color: var(--white);
+  font-size: 11px;
+  left: 50%;
+  line-height: 135%;
+  margin-inline: auto;
+  position: absolute;
+  text-align: center;
+  text-transform: uppercase;
+  transform: translateX(-50%);
+}
+@media (min-width: 768px) {
+  .faq-heading {
+    margin-bottom: 3rem;
+  }
+}
+@media (min-width: 1024px) {
+  .tab-heading {
+    margin-bottom: 5rem;
+    text-align: center;
+  }
+  .wrapper-nav-header .h1-heading {
+    font-size: 2.5rem;
+    position: absolute;
+    transform: translateX(-50%);
+    left: 50%;
+    width: max-content;
+  }
+  .h1--heading--regulativa {
+    width: max-content;
+  }
+  .tab-btn-heading {
+    bottom: -22px;
+    color: var(--white);
+    font-size: 12px;
+    width: max-content;
+    left: 50%;
+    line-height: 135%;
+    margin-inline: auto;
+    position: absolute;
+    text-align: center;
+    text-transform: uppercase;
+    transform: translateX(-50%);
+  }
 }

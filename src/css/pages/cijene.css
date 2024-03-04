@@ -6,7 +6,10 @@
   padding-inline: 1rem;
   padding-bottom: 4rem;
 }
-.cijene.ui-wrapper {
+.main-cijene {
+  padding: 0.5rem;
+}
+.main-cijene .ui-wrapper {
   background-color: var(--low-white);
 }
 .cijene__inner-wrapper {
@@ -69,6 +72,59 @@
 }
 .info-web-shop {
   padding: 10px;
+}
+.cijene-nav {
+  width: 100%;
+  margin-inline: auto;
+}
+.cijene-nav__wrapper {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.cijene-graficki-dizajn {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+.cijene-graficki-dizajn__row {
+  padding: 0.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  border: 1px solid hsla(0, 0%, 100%, 0.15);
+  border-radius: 6px;
+}
+.cijene-graficki-dizajn__col {
+  padding: 5px;
+  flex: 1;
+  border-radius: 3px;
+  display: grid;
+  place-items: center;
+  min-width: 200px;
+}
+.first-row,
+.third-row {
+  width: min-content;
+}
+.first-row {
+  background-color: hsla(0, 0%, 100%, 0.1);
+}
+.second-row {
+  padding: 1rem;
+}
+.third-row {
+  background-color: rgba(0, 128, 0, 0.264);
+}
+.cijene-nav + .ui-wrapper::after {
+  background: unset;
+}
+.upitnik-wrapper {
+  padding: 2rem;
+  margin-bottom: 2rem;
+  outline: 1px solid var(--white);
+}
+@media (min-width: 768px) {
 }
 @media (min-width: 1024px) {
   .cijene {

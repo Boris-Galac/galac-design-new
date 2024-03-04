@@ -1,0 +1,51 @@
+.tab-content {
+  padding: 1rem;
+  display: grid;
+  padding-block: 10vh;
+}
+.tab-content__wrapper {
+  max-width: 500px;
+  display: grid;
+  place-items: center;
+  margin-inline: auto;
+}
+.nav-tab {
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 15vw;
+  width: max-content;
+  margin-inline: auto;
+  margin-bottom: 2rem;
+}
+.tab-btn {
+  cursor: pointer;
+  transition: 0.5s;
+}
+.tab-btn[data-active="true"] {
+  filter: drop-shadow(0 0 10px var(--white));
+}
+.tab-btn:hover {
+  scale: 1.2;
+}
+.tab-content[data-active="false"] {
+  display: none;
+}
+.tab-content[data-active="true"] {
+  animation: tab-active forwards 1s;
+}
+@keyframes tab-active {
+  from {
+    display: none;
+    opacity: 0;
+    transform: translateX(10rem);
+  }
+  to {
+    display: grid;
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+.tab-btn > img {
+  pointer-events: none;
+}

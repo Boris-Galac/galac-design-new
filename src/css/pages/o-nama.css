@@ -4,6 +4,9 @@
 .o-nama {
   padding-inline: 1rem;
 }
+.o-nama .infinite-slider {
+  position: absolute;
+}
 .o-nama.ui-wrapper {
   padding: 1rem;
   padding-bottom: 5rem;
@@ -37,7 +40,26 @@
 .o-nama-tech {
   padding-block: 2rem;
 }
-
+.o-nama-person-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+.o-nama-card {
+  padding: 1rem;
+}
+.o-nama-avatar {
+  float: left;
+  margin-right: 10px;
+}
+.avatar-heading {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+.avatar-paragraph {
+  line-height: 180%;
+}
 .body-o-nama .ui--wrapper-desktop::after {
   content: "" !important;
   position: absolute !important;
@@ -63,5 +85,12 @@
     height: 100% !important;
     width: 120% !important;
     pointer-events: none !important;
+  }
+  .o-nama-person-wrapper {
+    display: flex;
+    flex-direction: row;
+  }
+  .o-nama-avatar {
+    margin-right: 10px;
   }
 }

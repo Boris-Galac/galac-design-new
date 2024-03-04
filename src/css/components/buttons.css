@@ -64,16 +64,6 @@ button {
 .web-solution-btn:hover {
   background-color: var(--mid-white) !important;
 }
-.tab-btn {
-  cursor: pointer;
-  transition: 0.5s;
-}
-.tab-btn[data-active="true"] {
-  filter: drop-shadow(0 0 10px var(--white));
-}
-.tab-btn:hover {
-  scale: 1.2;
-}
 .usluge__tab:hover .tab-btn {
   transition: 0.3s;
   opacity: 0.3;
@@ -155,6 +145,9 @@ button {
   transition: 0.2s;
   gap: 5px;
 }
+.back-btn img:last-child {
+  width: 27px;
+}
 .back-btn:hover {
   opacity: 0.5;
 }
@@ -183,4 +176,27 @@ button {
   .switch-clr-theme img {
     pointer-events: none;
   }
+}
+.upitnik-btn {
+  background-color: #d5d046;
+  transition: 0.3s;
+  border-radius: 100vmax;
+  color: var(--black);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1rem;
+  width: 100%;
+  font-size: 23px;
+  font-weight: 900;
+  gap: 0.5rem;
+  outline: 1px solid white;
+  outline-offset: 2px;
+  padding: 0.6rem 1.5rem;
+  text-transform: uppercase;
+}
+.upitnik-btn:hover {
+  background-color: #f8f126;
+  box-shadow: 0 0 1rem yellow;
+  outline-offset: 5px;
 }

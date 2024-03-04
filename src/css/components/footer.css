@@ -103,6 +103,9 @@ footer strong {
   right: 0;
   bottom: 0;
 }
+.copyright__obrt {
+  font-size: 0.8rem;
+}
 .footer-logo-link {
   width: 20rem;
 }
@@ -115,6 +118,13 @@ footer strong {
   flex-wrap: wrap;
   align-items: center;
   gap: 1rem;
+}
+.footer__copyright span {
+  font-size: 12px;
+  width: min-content;
+}
+.copyright .copyright-right-row p {
+  font-size: 0.8rem;
 }
 @media (min-width: 960px) {
   .footer {

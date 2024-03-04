@@ -8,33 +8,20 @@
 .usluge .ui-wrapper {
   background-color: var(--low-mid-white);
 }
-.usluge__tab {
-  padding: 1rem;
-  display: flex;
-  justify-content: center;
-  gap: 15vw;
-  width: max-content;
-  margin-inline: auto;
-}
-.tab-content {
-  padding: 1rem;
-  padding-block: 3rem;
-  display: grid;
-}
 .tab-article-content {
   display: flex;
   flex-direction: column;
 }
-.tab-content__wrapper {
-  max-width: 500px;
-  display: grid;
-  place-items: center;
-  margin-inline: auto;
+.usluge .wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
-.tab-text-wrapper {
+.usluge .wrapper .tab-text-wrapper {
   display: flex;
   align-items: flex-start;
   gap: 1rem;
+  flex: 1 1 300px;
 }
 .tab-text-wrapper img {
   width: 64px;
@@ -42,39 +29,14 @@
 .tab-first-row img {
   margin-inline: auto;
 }
-.tab-article-content[data-tabcontent="graph"] .wrapper,
-.tab-article-content[data-tabcontent="social"] .wrapper {
-  display: grid;
-  gap: 2rem;
-}
-.tab-article-content[data-tabcontent="social"] .wrapper {
-  transform: translateY(-12rem);
-}
 .solutions__article-wrapper {
   display: grid;
   gap: 1.5rem;
-  transform: translateY(-90px);
 }
-.tab-article-content[data-active="false"] {
-  display: none;
-}
-.tab-article-content[data-active="true"] {
-  animation: tab-active forwards 1s;
-}
-@keyframes tab-active {
-  from {
-    display: none;
-    opacity: 0;
-    transform: translateX(10rem);
-  }
-  to {
-    display: grid;
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-.tab-btn > img {
-  pointer-events: none;
+.socials-tab-content {
+  display: grid;
+  gap: 1.5rem;
+  transform: translateY(-110px);
 }
 /* web solutions modal */
 .web-modal {
@@ -110,20 +72,11 @@
   .solutions__article-wrapper {
     display: grid;
     gap: 1.5rem;
-    transform: translateY(-12rem);
     margin-inline: auto;
     width: min(100%, 700px);
   }
   .solutions__article-wrapper > * {
     width: 100%;
     max-width: unset;
-  }
-  .tab-article-content[data-tabcontent="social"] .wrapper {
-    display: grid;
-    gap: 2rem;
-    transform: translateY(-13rem);
-  }
-  .tab-article-content[data-tabcontent="graph"] .wrapper {
-    transform: translateY(-7rem);
   }
 }

@@ -4,7 +4,6 @@
   --mid-white: hsla(0, 0%, 100%, 0.1);
   --low-mid-white: hsla(0, 0%, 100%, 0.05);
   --low-white: hsla(0, 0%, 100%, 0.03);
-  --mid-white-hover: hsla(0, 0%, 100%, 0.15);
   --low-white-hover: hsla(0, 0%, 100%, 0.06);
   --low-mid-white-hover: hsla(0, 0%, 100%, 0.08);
   --footer-clr: hsla(0, 0%, 0%, 0.2);
@@ -15,14 +14,17 @@
   --effect-linear-3: hsla(348, 67%, 51%, 0.15);
   --overlay-clr: hsla(0, 0%, 0%, 0.8);
   /* darker */
-  --mid-white: hsla(213, 100%, 47%, 0.218);
-  --low-mid-white: rgb(20 117 197 / 18%);
-  --low-white: hsla(222, 100%, 50%, 0.1);
+  --mid-white: hsla(209, 100%, 50%, 0.1);
+  --mid-white-hover: hsla(221, 100%, 50%, 0.298);
+  --low-mid-white: hsla(211, 100%, 50%, 0.05);
+  --low-white: hsla(212, 100%, 50%, 0.03);
+  --blue-glass-clr: rgba(0, 108, 240, 0.218);
   --effect-linear-1: var(--black);
   --effect-linear-2: hsla(240, 90%, 56%, 0.9);
   --effect-linear-3: hsla(219, 100%, 51%, 0.15);
 }
 body.light-theme {
+  --blue-glass-clr: rgba(0, 0, 0, 0.39);
   --effect-linear-1: hsl(206, 53%, 82%);
   --effect-linear-2: hsla(240, 80%, 79%, 0.9);
   --effect-linear-3: hsl(0, 0%, 100%);

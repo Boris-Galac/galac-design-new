@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
 if (window.location.href.length === 22 || window.location.href.length === 32) {
   // HOME SCREEN BANNER
   var swiper = new Swiper(".cube", {
-    // effect: "cube",
+    effect: "cube",
     loop: true,
     speed: 1000,
     autoplay: {
@@ -48,7 +48,6 @@ if (window.location.href.includes("graficki-dizajn")) {
     });
   });
   projectBtns.forEach((btn) => {
-    // layoutBtn.addEventListener("click", (e) => {});
     btn.addEventListener("click", (e) => {
       projects.forEach((project) => {
         project.setAttribute("data-active", "false");
@@ -64,21 +63,6 @@ if (window.location.href.includes("graficki-dizajn")) {
 ////// 💡💡💡💡💡💡 USLUGE
 
 if (window.location.href.includes("usluge")) {
-  // TAB SOLUTIONS
-  document.querySelectorAll(".tab-btn").forEach((btn) => {
-    btn.addEventListener("click", (e) => {
-      document
-        .querySelectorAll(".tab-btn")
-        .forEach((btn) => btn.setAttribute("data-active", "false"));
-      e.target.setAttribute("data-active", "true");
-      document.querySelectorAll(".tab-article-content").forEach((tab) => {
-        tab.setAttribute("data-active", "false");
-        if (e.target.dataset.tab === tab.dataset.tabcontent) {
-          tab.setAttribute("data-active", "true");
-        }
-      });
-    });
-  });
   // TAB WEB SOLUTIONS MODALS
   document.querySelectorAll(".web-solution-btn").forEach((btn) => {
     btn.addEventListener("click", (e) => {
@@ -102,6 +86,29 @@ if (window.location.href.includes("usluge")) {
         overlay.addEventListener("animationend", (e) => {
           overlay.remove();
         });
+      });
+    });
+  });
+}
+
+////// 💡💡💡💡💡💡 USLUGE & CIJENE
+
+if (
+  window.location.href.includes("usluge") ||
+  window.location.href.includes("cijene")
+) {
+  // TAB SOLUTIONS
+  document.querySelectorAll(".tab-btn").forEach((btn) => {
+    btn.addEventListener("click", (e) => {
+      document
+        .querySelectorAll(".tab-btn")
+        .forEach((btn) => btn.setAttribute("data-active", "false"));
+      e.target.setAttribute("data-active", "true");
+      document.querySelectorAll(".tab-content").forEach((tab) => {
+        tab.setAttribute("data-active", "false");
+        if (e.target.dataset.tab === tab.dataset.tabcontent) {
+          tab.setAttribute("data-active", "true");
+        }
       });
     });
   });

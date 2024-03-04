@@ -7,6 +7,9 @@
   padding: 1rem;
   padding-bottom: 5rem;
 }
+.faq .infinite-slider {
+  position: absolute;
+}
 .faq.ui-wrapper {
   background-color: var(--low-mid-white);
 }

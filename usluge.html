@@ -30,6 +30,7 @@
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
     <link rel="stylesheet" href="dist/style.css" />
+    <!-- <link rel="stylesheet" href="src/css/style.css" /> -->
     <script defer src="/src/js/database.js"></script>
     <script defer src="/src/js/main.js"></script>
   </head>
@@ -102,26 +103,37 @@
     <main class="main main-graph">
       <section class="usluge">
         <div class="usluge__tab-wrapper">
-          <div class="usluge__tab">
-            <button class="tab-btn" data-tab="web" data-active="true">
+          <nav class="nav-tab">
+            <button class="tab-btn" data-tab="tab-content-1" data-active="true">
               <img src="/src/assets/icons/web-icon.svg" aria-hidden="true" />
+              <span class="tab-btn-heading">web rješenje</span>
             </button>
-            <button class="tab-btn" data-tab="graph" data-active="false">
+            <button
+              class="tab-btn"
+              data-tab="tab-content-2"
+              data-active="false"
+            >
               <img
                 src="/src/assets/icons/graphic-icon.svg"
                 aria-hidden="true"
               />
+              <span class="tab-btn-heading">grafički dizajn</span>
             </button>
-            <button class="tab-btn" data-tab="social" data-active="false">
+            <button
+              class="tab-btn"
+              data-tab="tab-content-3"
+              data-active="false"
+            >
               <img src="/src/assets/icons/like.svg" aria-hidden="true" />
+              <span class="tab-btn-heading">društvene mreže</span>
             </button>
-          </div>
+          </nav>
         </div>
-        <div class="tab-content ui-wrapper ui--wrapper-desktop max-width">
-          <div class="tab-content__wrapper">
+        <div class="ui-wrapper max-width">
+          <div class="tab-content-wrapper">
             <article
-              class="tab-article-content"
-              data-tabcontent="web"
+              class="tab-content"
+              data-tabcontent="tab-content-1"
               data-active="true"
             >
               <div class="tab-first-row">
@@ -138,9 +150,9 @@
                 <img
                   src="/src/assets/images/web-solution-img.png"
                   alt="web graphic about websites"
+                  class="web-tab-img"
                 />
               </div>
-
               <div class="solutions__article-wrapper">
                 <button
                   class="web-solution-btn ui-wrapper"
@@ -175,8 +187,8 @@
               </div>
             </article>
             <article
-              class="tab-article-content"
-              data-tabcontent="graph"
+              class="tab-content"
+              data-tabcontent="tab-content-2"
               data-active="false"
             >
               <div class="tab-first-row">
@@ -236,8 +248,8 @@
               </div>
             </article>
             <article
-              class="tab-article-content"
-              data-tabcontent="social"
+              class="tab-content"
+              data-tabcontent="tab-content-3"
               data-active="false"
             >
               <div class="tab-first-row">
@@ -249,7 +261,7 @@
                   alt="graphic about socials"
                 />
               </div>
-              <div class="wrapper">
+              <div class="socials-tab-content wrapper">
                 <div class="tab-text-wrapper">
                   <img
                     src="/src/assets/icons/analysis-icon.png"
@@ -309,88 +321,6 @@
                 </div>
               </div>
             </article>
-          </div>
-          <div class="infinite-slider">
-            <ul class="infinite-slider__wrapper">
-              <li class="infinite__slider__slide">
-                <span class="slide-text slide-text-1">web stranice</span>
-              </li>
-              <li class="infinite__slider__slide">
-                <span class="slide-text slide-text-2">web shopovi</span>
-              </li>
-              <li class="infinite__slider__slide">
-                <span class="slide-text slide-text-3">vizitke</span>
-              </li>
-              <li class="infinite__slider__slide">
-                <span class="slide-text slide-text-4">letci</span>
-              </li>
-              <li class="infinite__slider__slide">
-                <span class="slide-text slide-text-5">logo</span>
-              </li>
-              <li class="infinite__slider__slide">
-                <span class="slide-text slide-text-6">webflow</span>
-              </li>
-            </ul>
-            <ul class="infinite-slider__wrapper">
-              <li class="infinite__slider__slide">
-                <span class="slide-text slide-text-1">web stranice</span>
-              </li>
-              <li class="infinite__slider__slide">
-                <span class="slide-text slide-text-2">web shopovi</span>
-              </li>
-              <li class="infinite__slider__slide">
-                <span class="slide-text slide-text-3">vizitke</span>
-              </li>
-              <li class="infinite__slider__slide">
-                <span class="slide-text slide-text-4">letci</span>
-              </li>
-              <li class="infinite__slider__slide">
-                <span class="slide-text slide-text-5">logo</span>
-              </li>
-              <li class="infinite__slider__slide">
-                <span class="slide-text slide-text-6">webflow</span>
-              </li>
-            </ul>
-            <ul class="infinite-slider__wrapper">
-              <li class="infinite__slider__slide">
-                <span class="slide-text slide-text-1">web stranice</span>
-              </li>
-              <li class="infinite__slider__slide">
-                <span class="slide-text slide-text-2">web shopovi</span>
-              </li>
-              <li class="infinite__slider__slide">
-                <span class="slide-text slide-text-3">vizitke</span>
-              </li>
-              <li class="infinite__slider__slide">
-                <span class="slide-text slide-text-4">letci</span>
-              </li>
-              <li class="infinite__slider__slide">
-                <span class="slide-text slide-text-5">logo</span>
-              </li>
-              <li class="infinite__slider__slide">
-                <span class="slide-text slide-text-6">webflow</span>
-              </li>
-            </ul>
-            <ul class="infinite-slider__wrapper">
-              <li class="infinite__slider__slide">
-                <span class="slide-text slide-text-1">web stranice</span>
-              </li>
-              <li class="infinite__slider__slide">
-                <span class="slide-text slide-text-2">web shopovi</span>
-              </li>
-              <li class="infinite__slider__slide">
-                <span class="slide-text slide-text-3">vizitke</span>
-              </li>
-              <li class="infinite__slider__slide">
-                <span class="slide-text slide-text-4">letci</span>
-              </li>
-              <li class="infinite__slider__slide">
-                <span class="slide-text slide-text-5">logo</span>
-              </li>
-              <li class="infinite__slider__slide">
-                <span class="slide-text slide-text-6">banneri</span>
-              </li>
-            </ul>
           </div>
         </div>
       </section>

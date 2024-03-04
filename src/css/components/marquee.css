@@ -1,7 +1,7 @@
 /* infinite marquee */
 
 .infinite-slider {
-  position: absolute;
+  position: fixed;
   bottom: 0;
   display: flex;
   background-color: var(--black);
