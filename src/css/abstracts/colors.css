@@ -12,7 +12,7 @@
   --effect-linear-1: hsl(240, 71%, 12%);
   --effect-linear-2: hsla(240, 67%, 51%, 0.9);
   --effect-linear-3: hsla(348, 67%, 51%, 0.15);
-  --overlay-clr: hsla(0, 0%, 0%, 0.8);
+  --overlay-clr: hsla(0, 0%, 0%, 0.9);
   /* darker */
   --mid-white: hsla(209, 100%, 50%, 0.1);
   --mid-white-hover: hsla(221, 100%, 50%, 0.298);

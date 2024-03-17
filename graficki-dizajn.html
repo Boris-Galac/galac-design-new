@@ -38,7 +38,17 @@
     <script defer src="/src/js/main.js"></script>
   </head>
   <body class="body body-web">
-    <header class="header">
+    <button
+    class="ham-btn"
+    tabindex="0"
+    aria-label="ham button"
+    aria-controls="primary-nav"
+    data-active="false"
+  >
+    <div class="ham-line"></div>
+    <div class="ham-line"></div>
+  </button>
+    <header class="header header-home">
       <div class="upper-header">
         <div class="logo-wrapper">
           <a href="index.html">
@@ -50,24 +60,6 @@
           </a>
         </div>
         <div class="upper-header__right-row">
-          <div class="upper-header__info ui-wrapper">
-            <a
-              class="upper-header__info__link"
-              href="mailto:boris.galac@gmail.com"
-              ><img
-                class="icon"
-                src="/src/assets/icons/mail-icon.svg"
-                alt="mail icon"
-              />boris.galac@gmail.com</a
-            >
-            <a class="upper-header__info__link" href="tel:+385996682736"
-              ><img
-                class="icon"
-                src="/src/assets/icons/little-phone-icon.svg"
-                alt="phone icon"
-              />0996682736</a
-            >
-          </div>
           <button class="switch-clr-theme" data-theme="dark">
             <img
               class="clr-theme-icon"
@@ -86,6 +78,110 @@
           </button>
         </div>
       </div>
+      <nav
+        id="primary-nav"
+        class="nav primary-nav--width"
+        aria-label="primary navigation"
+        aria-expanded="false"
+      >
+        <div class="nav__primary">
+          <a
+            class="nav__link nav__primary-link ui-wrapper home-link-ui-wrapper"
+            href="web-portfolio.html"
+          >
+            <span class="nav--link-heading nav--link-bigger-heading"
+              >web portfolio</span
+            >
+            <img
+              class="nav__primary-link--icon"
+              src="/src/assets/icons/web-icon.svg"
+              alt="web portfolio icon"
+            />
+          </a>
+          <a
+            class="nav__link nav__primary-link ui-wrapper home-link-ui-wrapper"
+            href="graficki-dizajn.html"
+          >
+            <span class="nav--link-heading nav--link-bigger-heading"
+              >grafički dizajn</span
+            >
+            <img
+              class="nav__primary-link--icon"
+              src="/src/assets/icons/graphic-icon.svg"
+              alt="grahic design portfolio icon"
+            />
+          </a>
+        </div>
+        <div class="nav__inner-wrapper">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a
+                class="nav__link nav__secondary-link ui-wrapper"
+                href="usluge.html"
+              >
+                <span class="nav--link-heading">usluge</span>
+                <img
+                  class="icon nav__link-icon"
+                  src="/src/assets/icons/offer-icon.svg"
+                  alt="offers of galac design icon"
+                />
+              </a>
+            </li>
+            <li class="nav__item">
+              <a
+                class="nav__link nav__secondary-link ui-wrapper"
+                href="katalog.html"
+              >
+                <span class="nav--link-heading">katalog/paketi </span>
+                <img
+                  class="nav__link-icon"
+                  src="/src/assets/icons/subscription-icon.svg"
+                  alt="subscritpion portfolio icon"
+                />
+              </a>
+            </li>
+            <li class="nav__item">
+              <a
+                class="nav__link nav__secondary-link ui-wrapper"
+                href="o-nama.html"
+              >
+                <span class="nav--link-heading">o nama </span>
+                <img
+                  class="icon nav__link-icon nav__link-icon--o-nama"
+                  src="/src/assets/icons/galac-design-logo-white.svg"
+                  alt="galac design white portfolio icon"
+                />
+              </a>
+            </li>
+            <li class="nav__item">
+              <a
+                class="nav__link nav__secondary-link ui-wrapper"
+                href="faq.html"
+              >
+                <span class="nav--link-heading">faq</span>
+                <img
+                  class="icon nav__link-icon"
+                  src="/src/assets/icons/faq-icon.svg"
+                  alt="frequently asked question icon"
+                />
+              </a>
+            </li>
+            <li class="nav__item">
+              <a
+                class="nav__link nav__secondary-link ui-wrapper"
+                href="kontakt.html"
+              >
+                <span class="nav--link-heading">kontakt</span>
+                <img
+                  class="icon nav__link-icon"
+                  src="/src/assets/icons/contact-icon.svg"
+                  alt="contact portfolio icon"
+                />
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
       <div class="wrapper-nav-header ui-wrapper-1">
         <button class="back-to-home ui-wrapper-1">
           <a href="index.html" class="back-btn">
@@ -120,6 +216,28 @@
                   />
                 </button>
                 <div class="grafika__projects-btn-wrapper">
+                  <button
+                    class="project-btn"
+                    data-project="mmakeup"
+                    title="mmakeup"
+                  >
+                    <img
+                      src="src/assets/images/mmakeup-project.png"
+                      alt="silverback backetball academy project"
+                      class="icon"
+                    />
+                  </button>
+                  <button
+                    class="project-btn"
+                    data-project="silverback"
+                    title="Silverback-basketball-academy"
+                  >
+                    <img
+                      src="src/assets/images/silverback-logo.png"
+                      alt="silverback backetball academy project"
+                      class="icon"
+                    />
+                  </button>
                   <button
                     class="project-btn"
                     data-project="home-clean-home"
@@ -186,6 +304,96 @@
             </div>
             <!-- PROJECTS -->
             <div class="projects" data-opened="true">
+              <figure class="graph-project right-image" id="mmakeup" data-active="false">
+                <div class="project__header">
+                <div class="project__col project__col--first-col">
+                <span class="project__label">Ime projekta</span>
+                <h2 class="project__description project__title--main-heading">
+                  MMakeup
+                </h2>
+                </div>
+                <div class="project__col">
+                <span class="project__label">Opis projekta</span>
+                <p class="project__description project__description--paragraph">
+                  MMakeup je osječki beauty studio koji se u prvom planu bavi profesionalnim šminkanjem. Bilo nam je vrhunsko zadovoljstvo izraditi promo materijal koji će služiti za bolji marketing. 
+                </p>
+                </div>
+                <div class="project__col">
+                <span class="project__label">Tip projekta</span>
+                <h2 class="project__description project__description--brand-heading">
+                  Dizajn letka
+                </h2>
+                </div>
+                <div class="project__col">
+                <span class="project__label">Korištene tehnologije</span>
+                <h2 class="project__description project__description__last-col"><img src="src/assets/images/illustrator-tech.png" alt="adobe photoshop"><img src="src/assets/images/ps-tech.png" alt="adobe photoshop">
+                </div>
+                </div>
+                <div class="project__content">
+                <div class="gallery">
+                      <a href="src/assets/images/project-imgs/mmakeup/1-big.jpg" data-caption="MMakeup">
+                        <img src="src/assets/images/project-imgs/mmakeup/1-thumb.jpg" alt="Image 1"/>
+                      </a>
+                      <a href="src/assets/images/project-imgs/mmakeup/2-big.jpg" data-caption="MMakeup">
+                        <img src="src/assets/images/project-imgs/mmakeup/2-big.jpg" alt="Image 1"/>
+                      </a>
+                      <a href="src/assets/images/project-imgs/mmakeup/3-big.jpg" data-caption="MMakeup">
+                        <img src="src/assets/images/project-imgs/mmakeup/3-thumb.jpg" alt="Image 1"/>
+                      </a>
+                      <a href="src/assets/images/project-imgs/mmakeup/4-big.jpg" data-caption="MMakeup">
+                        <img src="src/assets/images/project-imgs/mmakeup/4-thumb.jpg" alt="Image 1"/>
+                      </a>
+                      <a href="src/assets/images/project-imgs/mmakeup/5-big.jpg" data-caption="MMakeup">
+                        <img src="src/assets/images/project-imgs/mmakeup/5-thumb.jpg" alt="Image 1"/>
+                      </a>
+                      <a href="src/assets/images/project-imgs/mmakeup/6-big.jpg" data-caption="MMakeup">
+                        <img src="src/assets/images/project-imgs/mmakeup/6-thumb.jpg" alt="Image 1"/>
+                      </a>
+                </div>
+                </div>
+              </figure>
+              <figure class="graph-project right-image" id="silverback" data-active="false">
+                <div class="project__header">
+                <div class="project__col project__col--first-col">
+                <span class="project__label">Ime projekta</span>
+                <h2 class="project__description project__title--main-heading">
+                  Sliverback Basketball Academy
+                </h2>
+                </div>
+                <div class="project__col">
+                <span class="project__label">Opis projekta</span>
+                <p class="project__description project__description--paragraph">
+                  Predstavljamo Vam izradu plakata za košarkašku akademiju iz Tübingena. Silverback Basketball Academy je naziv organizacije/akademije posvećene razvoju košarkaških vještina i obuke mladih igrača. Ove akademije obično nude treninge, kampove, individualne i grupne treninge, te natjecanja za mlade košarkaše s ciljem poboljšanja njihovih tehnika, taktike i kondicije.
+                </p>
+                </div>
+                <div class="project__col">
+                <span class="project__label">Tip projekta</span>
+                <h2 class="project__description project__description--brand-heading">
+                  Dizajn plakata
+                </h2>
+                </div>
+                <div class="project__col">
+                <span class="project__label">Korištene tehnologije</span>
+                <h2 class="project__description project__description__last-col"><img src="src/assets/images/illustrator-tech.png" alt="adobe photoshop"><img src="src/assets/images/ps-tech.png" alt="adobe photoshop">
+                </div>
+                </div>
+                <div class="project__content">
+                <div class="gallery">
+                      <a href="src/assets/images/project-imgs/Silverback-basketball-academy/1-big.jpg" data-caption="Silverback-basketball-academy">
+                        <img src="src/assets/images/project-imgs/Silverback-basketball-academy/1-thumb.jpg" alt="Image 1"/>
+                      </a>
+                      <a href="src/assets/images/project-imgs/Silverback-basketball-academy/2-big.jpeg" data-caption="Silverback-basketball-academy">
+                        <img src="src/assets/images/project-imgs/Silverback-basketball-academy/2-thumb.jpg" alt="Image 1"/>
+                      </a>
+                      <a href="src/assets/images/project-imgs/Silverback-basketball-academy/3-big.png" data-caption="Silverback-basketball-academy">
+                        <img src="src/assets/images/project-imgs/Silverback-basketball-academy/3-thumb.jpg" alt="Image 1"/>
+                      </a>
+                      <a href="src/assets/images/project-imgs/Silverback-basketball-academy/4-big.png" data-caption="Silverback-basketball-academy">
+                        <img src="src/assets/images/project-imgs/Silverback-basketball-academy/4-thumb.jpg" alt="Image 1"/>
+                      </a>
+                </div>
+                </div>
+              </figure>
               <figure class="graph-project right-image" id="home-clean-home" data-active="false">
                 <div class="project__header">
                 <div class="project__col project__col--first-col">

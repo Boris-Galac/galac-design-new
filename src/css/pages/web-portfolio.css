@@ -169,7 +169,7 @@
     height: 100%;
     gap: 1.5rem;
     padding: 0.5rem;
-    padding-bottom: 10rem;
+    padding-bottom: 1rem;
     padding-top: 1rem;
     grid-template-columns: 4fr 2fr;
     grid-template-rows: repeat(10, 1fr);

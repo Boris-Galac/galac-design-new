@@ -46,11 +46,21 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
-    <!-- <link rel="stylesheet" href="/src/css/style.css" /> -->
-    <link rel="stylesheet" href="dist/style.css" />
+    <link rel="stylesheet" href="/src/css/style.css" />
+    <!-- <link rel="stylesheet" href="dist/style.css" /> -->
     <script defer src="/src/js/main.js"></script>
   </head>
   <body class="body body-home">
+    <button
+      class="ham-btn"
+      tabindex="0"
+      aria-label="ham button"
+      aria-controls="primary-nav"
+      data-active="false"
+    >
+      <div class="ham-line"></div>
+      <div class="ham-line"></div>
+    </button>
     <header class="header header-home">
       <div class="upper-header">
         <div class="logo-wrapper">
@@ -63,24 +73,6 @@
           </a>
         </div>
         <div class="upper-header__right-row">
-          <div class="upper-header__info ui-wrapper">
-            <a
-              class="upper-header__info__link"
-              href="mailto:boris.galac@gmail.com"
-              ><img
-                class="icon"
-                src="/src/assets/icons/mail-icon.svg"
-                alt="mail icon"
-              />boris.galac@gmail.com</a
-            >
-            <a class="upper-header__info__link" href="tel:+385996682736"
-              ><img
-                class="icon"
-                src="/src/assets/icons/little-phone-icon.svg"
-                alt="phone icon"
-              />0996682736</a
-            >
-          </div>
           <button class="switch-clr-theme" data-theme="dark">
             <img
               class="clr-theme-icon"
@@ -99,7 +91,12 @@
           </button>
         </div>
       </div>
-      <nav class="nav primary-nav--width" aria-label="primary navigation">
+      <nav
+        id="primary-nav"
+        class="nav primary-nav--width"
+        aria-label="primary navigation"
+        aria-expanded="false"
+      >
         <div class="nav__primary">
           <a
             class="nav__link nav__primary-link ui-wrapper home-link-ui-wrapper"
@@ -146,9 +143,9 @@
             <li class="nav__item">
               <a
                 class="nav__link nav__secondary-link ui-wrapper"
-                href="cijene.html"
+                href="katalog.html"
               >
-                <span class="nav--link-heading">cijene/paketi </span>
+                <span class="nav--link-heading">katalog/paketi </span>
                 <img
                   class="nav__link-icon"
                   src="/src/assets/icons/subscription-icon.svg"
@@ -196,90 +193,123 @@
               </a>
             </li>
           </ul>
-          <div class="ad" aria-label="advertisement">
-            <div class="swiper cube">
-              <div class="swiper-wrapper">
-                <picture class="swiper-slide">
-                  <source
-                    media="(min-width:1494px)"
-                    srcset="/src/assets/images/ad/graficki-dizajn-ad-4.png"
-                  />
-                  <source
-                    media="(min-width:1200px)"
-                    srcset="/src/assets/images/ad/graficki-dizajn-ad-6.png"
-                  />
-                  <source
-                    media="(min-width:755px)"
-                    srcset="/src/assets/images/ad/graficki-dizajn-ad-3.png"
-                  />
-                  <source
-                    media="(min-width:490px)"
-                    srcset="/src/assets/images/ad/graficki-dizajn-ad-2.png"
-                  />
-                  <img
-                    src="/src/assets/images/ad/graficki-dizajn-ad-1.png"
-                    alt="graphic design image"
-                  />
-                </picture>
-                <picture class="swiper-slide">
-                  <source
-                    media="(min-width:1494px)"
-                    srcset="/src/assets/images/ad/socials-ad-4.png"
-                  />
-                  <source
-                    media="(min-width:1200px)"
-                    srcset="/src/assets/images/ad/socials-ad-6.png"
-                  />
-                  <source
-                    media="(min-width:1063px)"
-                    srcset="/src/assets/images/ad/socials-ad-4.png"
-                  />
-                  <source
-                    media="(min-width:755px)"
-                    srcset="/src/assets/images/ad/socials-ad-3.png"
-                  />
-                  <source
-                    media="(min-width:490px)"
-                    srcset="/src/assets/images/ad/socials-ad-2.png"
-                  />
-                  <img
-                    src="/src/assets/images/ad/socials-ad-1.png"
-                    alt="socials design image"
-                  />
-                </picture>
-                <picture class="swiper-slide">
-                  <source
-                    media="(min-width:1494px)"
-                    srcset="/src/assets/images/ad/website-ad-4.png"
-                  />
-                  <source
-                    media="(min-width:1200px)"
-                    srcset="/src/assets/images/ad/website-ad-6.png"
-                  />
-                  <source
-                    media="(min-width:1063px)"
-                    srcset="/src/assets/images/ad/website-ad-4.png"
-                  />
-                  <source
-                    media="(min-width:755px)"
-                    srcset="/src/assets/images/ad/website-ad-3.png"
-                  />
-                  <source
-                    media="(min-width:490px)"
-                    srcset="/src/assets/images/ad/website-ad-2.png"
-                  />
-                  <img
-                    src="/src/assets/images/ad/website-ad-1.png"
-                    alt="website design image"
-                  />
-                </picture>
-              </div>
-              <div class="swiper-pagination"></div>
-            </div>
-          </div>
         </div>
       </nav>
     </header>
+    <main class="main home-main">
+      <section class="hero ui-wrapper">
+        <video autoplay muted loop playsinline class="video-background">
+          <source src="video-overlay.mp4" type="video/mp4" />
+        </video>
+        <div class="hero__headine-wrapper">
+          <h1 class="headline">
+            transformiramo vaše ideje u digitalnu stvarnost
+          </h1>
+          <p class="subheadline">
+            Efikasna i kvalitetna izrada web stranica, shopova, grafičkog
+            dizajna, sve vrste digitalnog dizajna i marketinga po Vašoj mjeri
+          </p>
+        </div>
+        <img
+          src="/src/assets/images/hero-website.svg"
+          alt="hero generic website example image"
+          class="hero-website"
+          aria-label="3d roation img website"
+        />
+        <div class="dot"></div>
+        <a class="circle-link" href="#ponuda">
+          <div id="circle">
+            <img class="down-icon" src="/src/assets/icons/down-icon.svg" />
+
+            <svg
+              version="1.1"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              x="0px"
+              y="0px"
+              width="300px"
+              height="300px"
+              viewBox="0 0 300 300"
+              enable-background="new 0 0 300 300"
+              xml:space="preserve"
+            >
+              <defs>
+                <path
+                  id="circlePath"
+                  d="M 150, 150 m -60, 0 a 60,60 0 0,1 120,0 a 60,60 0 0,1 -120,0 "
+                />
+              </defs>
+              <circle cx="150" cy="100" r="75" fill="none" />
+              <g>
+                <use xlink:href="#circlePath" fill="none" />
+                <text fill="#fff">
+                  <textPath xlink:href="#circlePath">
+                    GALAC-DESIGN • GALAC-DESIGN • GALAC-DESIGN
+                  </textPath>
+                </text>
+              </g>
+            </svg>
+          </div></a
+        >
+      </section>
+      <section class="ponuda ui-wrapper-1" id="ponuda">
+        <div class="container">
+          <h2
+            class="h2-heading h2-heading--home-page h2-heading--home-page-center"
+          >
+            Ponuda
+          </h2>
+          <div class="ponuda__wrapper"></div>
+        </div>
+      </section>
+      <section class="portfolio ui-wrapper-1">
+        <div class="container">
+          <h2 class="h2-heading h2-heading--home-page">Pogledaj radove</h2>
+          <div class="portfolio__wrapper">
+            <div class="portfolio__btns-wrapper">
+              <a
+                href="web-portfolio.html"
+                role="button"
+                class="portfolio-video-btn ui-wrapper-1"
+                data-heading="web portfolio"
+                aria-label="go to web portfolio podstranica"
+              >
+                <div class="btn-video-overlay"></div>
+                <video autoplay muted loop playsinline class="portfolio-video">
+                  <source
+                    src="/src/assets/web-portfolio-video-btn.mp4"
+                    type="video/mp4"
+                  />
+                </video>
+                <img
+                  src="/src/assets/icons/arrow-right-video-btn-icon.svg"
+                  aria-hidden="true"
+                />
+              </a>
+              <a
+                href="graficki-dizajn.html"
+                role="button"
+                class="portfolio-video-btn ui-wrapper-1"
+                data-heading="grafički dizajn"
+                aria-label="go to graficki dizajn podstranica"
+              >
+                <div class="btn-video-overlay"></div>
+                <video autoplay muted loop playsinline class="portfolio-video">
+                  <source
+                    src="/src/assets/graficki-dizajn-video-btn.mp4"
+                    type="video/mp4"
+                  />
+                </video>
+                <img
+                  src="/src/assets/icons/arrow-right-video-btn-icon.svg"
+                  aria-hidden="true"
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
     <div class="effect">
       <div class="circle-1"></div>
       <div class="circle-2"></div>
@@ -380,6 +410,121 @@
         </div>
       </div>
     </div>
+    <footer class="footer ui-wrapper-1">
+      <div class="container">
+        <div class="footer__wrapper">
+          <nav class="footer__nav">
+            <ul class="footer__list">
+              <li class="footer__item">
+                <a class="footer__link" href="usluge.html">Usluge</a>
+              </li>
+              <li class="footer__item">
+                <a class="footer__link" href="cijene.html">Cijene/paketi</a>
+              </li>
+              <li class="footer__item">
+                <a class="footer__link" href="kontakt.html">Kontakt</a>
+              </li>
+              <li class="footer__item">
+                <a class="footer__link" href="o-nama.html">O nama</a>
+              </li>
+              <li class="footer__item">
+                <a class="footer__link" href="web-portfolio.html"
+                  >Web portfolio</a
+                >
+              </li>
+              <li class="footer__item">
+                <a class="footer__link" href="graficki-dizajn.html"
+                  >Grafički dizajn</a
+                >
+              </li>
+              <li class="footer__item">
+                <a class="footer__link" href="faq.html"
+                  >Često postavljena pitanja</a
+                >
+              </li>
+            </ul>
+          </nav>
+          <div class="footer__socials">
+            <a
+              target="_blank"
+              href="https://www.facebook.com/profile.php?id=100095723823495"
+              ><img src="/src/assets/icons/fb-icon.svg" alt="facebook"
+            /></a>
+            <a target="_blank" href="#"
+              ><img src="/src/assets/icons/whatsapp-icon.svg" alt="whatsapp"
+            /></a>
+            <a target="_blank" href="https://www.instagram.com/galac.design/"
+              ><img src="/src/assets/icons/instagram-icon.svg" alt="instagram"
+            /></a>
+            <a href="tel:+385996682736"
+              ><img src="/src/assets/icons/footer-phone.svg" alt="phone"
+            /></a>
+          </div>
+          <div class="footer__bottom-info">
+            <a href="index.html" class="footer-logo-link">
+              <img
+                class="footer-logo"
+                src="/src/assets/icons/logo.svg"
+                alt="logo"
+              />
+            </a>
+            <div>
+              <div class="footer__obrt-info">
+                <a href="mailto:boris.galac@gmail.com"
+                  ><img
+                    src="/src/assets/icons/footer-mail-icon.svg"
+                    aria-hidden="true"
+                    class="icon"
+                  />
+                  boris.galac@gmail.com</a
+                >
+                <a href="tel:+385996682736"
+                  ><img
+                    src="/src/assets/icons/footer-phone.svg"
+                    aria-hidden="true"
+                    class="icon"
+                  />0996682736</a
+                >
+                <div class="footer__copyright">
+                  <img
+                    src="/src/assets/icons/copyright-icon.svg"
+                    alt="copyright icon"
+                    class="icon"
+                  />
+                  <strong>GALAC-DESIGN</strong
+                  ><span>Obrt za računalno programiranje</span>
+                </div>
+                <div class="footer__address">
+                  <img
+                    src="/src/assets/icons/building-icon.svg"
+                    alt="home"
+                  /><strong>Alojzija Stepinca 11, 32249 Tovarnik</strong>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="footer__regulativa-wrapper">
+            <a class="footer__link" href="uvjeti-koristenja.html"
+              >Uvjeti korištenja</a
+            >
+            <a class="footer__link" href="pravila-privatnosti.html"
+              >Pravila privatnosti</a
+            >
+          </div>
+        </div>
+      </div>
+      <div class="copyright">
+        <div class="copyright__wrapper">
+          <p>Copyright © 2024 - Sva prava pridržana.</p>
+          <div class="copyright-right-row">
+            <strong>GALAC-DESIGN</strong>
+            <p>Obrt za računalno programiranje</p>
+          </div>
+        </div>
+      </div>
+    </footer>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
   </body>
 </html>

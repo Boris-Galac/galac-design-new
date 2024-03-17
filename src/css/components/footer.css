@@ -53,9 +53,11 @@
 .footer-logo-link {
   perspective: 1000px;
 }
-.footer-logo-link img:hover {
+.footer-logo-link img {
   transition: 0.8s;
-  transform: rotateY(360deg);
+}
+.footer-logo-link img:hover {
+  scale: 1.1;
 }
 .footer__obrt-info a {
   display: flex;
@@ -102,6 +104,7 @@ footer strong {
   left: 0;
   right: 0;
   bottom: 0;
+  z-index: 4;
 }
 .copyright__obrt {
   font-size: 0.8rem;

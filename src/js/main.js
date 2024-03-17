@@ -10,7 +10,12 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 //// 💡💡💡💡💡💡 INDEX
 
-if (window.location.href.length === 22 || window.location.href.length === 32) {
+if (
+  window.location.href.length === 22 ||
+  window.location.href.length === 32 ||
+  window.location.href.includes("offer") ||
+  window.location.href.includes("index")
+) {
   // HOME SCREEN BANNER
   var swiper = new Swiper(".cube", {
     effect: "cube",
@@ -29,6 +34,46 @@ if (window.location.href.length === 22 || window.location.href.length === 32) {
       el: ".swiper-pagination",
     },
   });
+  const windowWidth = window.innerWidth;
+
+  if (windowWidth > 1024) {
+    // gsap animation for website img
+    gsap.registerPlugin(ScrollTrigger);
+    const imgWbeiste = document.querySelector(".hero-website");
+    gsap.to(imgWbeiste, {
+      scale: 1.6,
+      rotationX: 50,
+      rotationY: 360,
+      duration: 3,
+      toggleClass: "scale",
+      scrollTrigger: {
+        scrub: 2,
+        trigger: ".dot",
+        toggleActions: "restart none none none", ///  1. onEnter 2. onLeave  3. onEnterBack  4. onLeaveBack
+        start: "top 85%",
+        end: "top 30%",
+        // markers: true,
+      },
+    });
+  } else {
+    // gsap animation for website img
+    gsap.registerPlugin(ScrollTrigger);
+    const imgWbeiste = document.querySelector(".hero-website");
+    gsap.to(imgWbeiste, {
+      scale: 1.4,
+      rotationX: 50,
+      rotationY: 360,
+      duration: 2,
+      scrollTrigger: {
+        scrub: 1,
+        trigger: ".dot",
+        toggleActions: "restart none none none", ///  1. onEnter 2. onLeave  3. onEnterBack  4. onLeaveBack
+        start: "top 85%",
+        end: "top 50%",
+        // markers: true,
+      },
+    });
+  }
 }
 
 //// 💡💡💡💡💡💡 GRAFICKI DIZAJN
@@ -95,7 +140,7 @@ if (window.location.href.includes("usluge")) {
 
 if (
   window.location.href.includes("usluge") ||
-  window.location.href.includes("cijene")
+  window.location.href.includes("katalog")
 ) {
   // TAB SOLUTIONS
   document.querySelectorAll(".tab-btn").forEach((btn) => {
@@ -114,9 +159,9 @@ if (
   });
 }
 
-////// 💡💡💡💡💡💡 CIJENE
+////// 💡💡💡💡💡💡 KATALOG
 
-if (window.location.href.includes("cijene")) {
+if (window.location.href.includes("katalog")) {
   // TAB WEB SOLUTIONS MODALS
   document.querySelectorAll(".offer-btn").forEach((btn) => {
     btn.addEventListener("click", (e) => {
@@ -142,6 +187,31 @@ if (window.location.href.includes("cijene")) {
           overlay.remove();
         });
       });
+    });
+  });
+  //// OFFER GMAIL CONTACT FORM
+  document.querySelectorAll(".upit-offer-btn").forEach((btn) => {
+    btn.addEventListener("click", (e) => {
+      const offerHeading =
+        btn.parentElement.parentElement.firstElementChild.innerText;
+      const bodyText =
+        "Poštovani,\n\nZanimam se za navedenu ponudu. Možete mi se javiti povratno što je prije moguće da bi ostvarili suradnju. \n\nLijep Vam pozdrav!"; // Add additional text after "Poštovani,\n\n"
+      const subject = encodeURIComponent(`Ponuda: ${offerHeading}`);
+      const body = encodeURIComponent(bodyText);
+      const recipient = "boris.galac@gmail.com";
+
+      // Compose the mailto link with recipient, subject, and body
+      const mailtoLink = `mailto:${recipient}?subject=${subject}&body=${body}`;
+
+      // Open the mail client
+      window.location.href = mailtoLink;
+    });
+  });
+  //// OFFER CALL CONTACT FORM
+  document.querySelectorAll(".call-offer-btn").forEach((btn) => {
+    btn.addEventListener("click", (e) => {
+      const phoneNumber = "+385996682736"; // Phone number to call
+      window.location.href = `tel:${phoneNumber}`;
     });
   });
 }
@@ -277,6 +347,44 @@ themeToggleBtn.addEventListener("click", (e) => {
       .querySelector('.clr-theme-icon[data-id="dark"]')
       .setAttribute("data-active", "true");
     localStorage.removeItem("currentTheme");
+  }
+});
+
+///////// HAM BTN
+
+const hamBtn = document.querySelector(".ham-btn");
+const nav = document.querySelector(".nav");
+
+hamBtn.addEventListener("click", (e) => {
+  if (hamBtn.getAttribute("data-active") === "true") {
+    hamBtn.setAttribute("data-active", "false");
+    nav.setAttribute("aria-expanded", "false");
+    const overlay = document.querySelector(".overlay");
+    overlay.setAttribute("data-visible", "false");
+    overlay.setAttribute("aria-expanded", "false");
+    overlay.addEventListener("animationend", (e) => {
+      overlay.remove();
+    });
+  } else {
+    hamBtn.setAttribute("data-active", "true");
+    nav.setAttribute("aria-expanded", "true");
+    // overlay
+    const overlay = document.createElement("div");
+    overlay.setAttribute("class", "overlay overlay--darker");
+    overlay.setAttribute("data-visible", "true");
+    overlay.setAttribute("aria-expanded", "true");
+    overlay.append(nav);
+    document.body.append(overlay);
+    overlay.addEventListener("click", (e) => {
+      if (e.target !== e.currentTarget) return;
+
+      overlay.setAttribute("data-visible", "false");
+      hamBtn.setAttribute("data-active", "false");
+
+      overlay.addEventListener("animationend", (e) => {
+        overlay.remove();
+      });
+    });
   }
 });
 

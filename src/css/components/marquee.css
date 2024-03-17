@@ -12,6 +12,7 @@
   overflow: hidden;
   left: 0;
   right: 0;
+  z-index: 3;
 }
 .infinite-slider > * {
   white-space: nowrap;
@@ -32,7 +33,7 @@
 }
 
 .infinite-slider__wrapper {
-  animation: scroll-animation 5s linear infinite;
+  animation: scroll-animation 10s linear infinite;
 }
 @keyframes scroll-animation {
   from {

@@ -2,7 +2,6 @@
 @import "abstracts/defaults.css";
 @import "abstracts/colors.css";
 @import "abstracts/typography.css";
-@import "abstracts/sizes.css";
 /* components */
 @import "components/header.css";
 @import "components/buttons.css";
@@ -13,6 +12,7 @@
 @import "components/tab.css";
 @import "components/gallery.css";
 @import "components/contact-form.css";
+@import "components/circural-text.css";
 @import "components/footer.css";
 /* pages */
 @import "pages/home.css";

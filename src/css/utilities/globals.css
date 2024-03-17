@@ -1,6 +1,23 @@
 .main {
   margin-bottom: 5rem;
 }
+.body-o-nama,
+.body-web,
+.body-usluge,
+.body-cijene,
+.body-faq,
+.body-kontakt {
+  padding: 0 !important;
+}
+.main-graph,
+.main-faq,
+.main-web,
+.main-o-nama,
+.main-graph,
+.main-cijene,
+.main-kontakt {
+  padding-top: 8rem;
+}
 .container {
   width: min(100% - 32px, 1024px);
   margin-inline: auto;
@@ -124,7 +141,7 @@
   position: fixed;
   inset: 0;
   background-color: var(--overlay-clr);
-  z-index: 4;
+  z-index: 5;
   cursor: pointer;
   display: grid;
   place-items: center;

@@ -52,7 +52,6 @@ a {
   font-size: 2rem;
   margin-bottom: 2rem;
 }
-
 .cijene-heading {
   text-transform: uppercase;
   text-align: center;
@@ -113,6 +112,26 @@ a {
   text-align: center;
   text-transform: uppercase;
   transform: translateX(-50%);
+  pointer-events: none;
+}
+.h2-heading--home-page {
+  position: relative;
+  font-size: clamp(2rem, 7vw, 3rem);
+  margin-bottom: 4rem;
+  margin-left: 2rem;
+}
+.h2-heading--home-page::after {
+  content: "";
+  position: absolute;
+  height: 75%;
+  transform: translateY(-50%);
+  top: 50%;
+  left: -2rem;
+  width: 3px;
+  background-color: rgb(6, 97, 216);
+  box-shadow: 0 0 10px 2px rgb(53, 53, 255);
+}
+.h2-heading--home-page-center {
 }
 @media (min-width: 768px) {
   .faq-heading {
