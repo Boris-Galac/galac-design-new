@@ -196,7 +196,8 @@
         </div>
       </nav>
     </header>
-    <main class="main home-main">
+    <main class="main home-main container">
+      <!-- HERO -->
       <section class="hero ui-wrapper">
         <video autoplay muted loop playsinline class="video-background">
           <source src="video-overlay.mp4" type="video/mp4" />
@@ -211,7 +212,7 @@
           </p>
         </div>
         <img
-          src="/src/assets/images/hero-website.svg"
+          src="/src/assets/images/hero-website.png"
           alt="hero generic website example image"
           class="hero-website"
           aria-label="3d roation img website"
@@ -220,7 +221,6 @@
         <a class="circle-link" href="#ponuda">
           <div id="circle">
             <img class="down-icon" src="/src/assets/icons/down-icon.svg" />
-
             <svg
               version="1.1"
               xmlns="http://www.w3.org/2000/svg"
@@ -252,16 +252,47 @@
           </div></a
         >
       </section>
+      <!-- PONUDA -->
       <section class="ponuda ui-wrapper-1" id="ponuda">
         <div class="container">
-          <h2
-            class="h2-heading h2-heading--home-page h2-heading--home-page-center"
-          >
-            Ponuda
-          </h2>
-          <div class="ponuda__wrapper"></div>
+          <h2 class="h2-heading h2-heading--home-page">Što sve radimo</h2>
+          <div class="ponuda__wrapper">
+            <a href="katalog.html">
+              <figure class="ponuda-box ui-wrapper-1">
+                <img
+                  src="/src/assets/icons/web-offer-icon.gif"
+                  alt="web development icon"
+                  class="offer-icon"
+                />
+                <span class="ponuda__heading"
+                  >izrada web stranice ili web shopa</span
+                >
+              </figure>
+            </a>
+            <a href="graficki-dizajn.html">
+              <figure class="ponuda-box ui-wrapper-1">
+                <img
+                  src="/src/assets/icons/graphic-offer-icon.gif"
+                  alt="graphic design icon"
+                  class="offer-icon"
+                />
+                <span class="ponuda__heading">grafički dizajn</span>
+              </figure>
+            </a>
+            <a href="katalog.html">
+              <figure class="ponuda-box ui-wrapper-1">
+                <img
+                  src="/src/assets/icons/socials-offer-icon.gif"
+                  alt="socials icon"
+                  class="offer-icon"
+                />
+                <span class="ponuda__heading">društvene mreže</span>
+              </figure>
+            </a>
+          </div>
         </div>
       </section>
+      <!-- PORTFOLIO -->
       <section class="portfolio ui-wrapper-1">
         <div class="container">
           <h2 class="h2-heading h2-heading--home-page">Pogledaj radove</h2>
@@ -271,7 +302,7 @@
                 href="web-portfolio.html"
                 role="button"
                 class="portfolio-video-btn ui-wrapper-1"
-                data-heading="web portfolio"
+                data-heading="web stranice"
                 aria-label="go to web portfolio podstranica"
               >
                 <div class="btn-video-overlay"></div>
@@ -305,6 +336,155 @@
                   aria-hidden="true"
                 />
               </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- AD -->
+      <section class="ad ui-wrapper-1">
+        <!-- Swiper -->
+        <div class="swiper mySwiper flip">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <picture>
+                <source
+                  media="(min-width:900px)"
+                  srcset="/src/assets/images/ad/web-dizajn-xxxl.jpg"
+                />
+                <source
+                  media="(min-width:650px)"
+                  srcset="/src/assets/images/ad/web-dizajn-xxl.jpg"
+                />
+                <source
+                  media="(min-width:465px)"
+                  srcset="/src/assets/images/ad/web-dizajn-xl.jpg"
+                />
+                <img
+                  src="/src/assets/images/ad/web-dizajn.jpg"
+                  alt="web dizajn"
+                />
+              </picture>
+            </div>
+            <div class="swiper-slide">
+              <picture>
+                <source
+                  media="(min-width:900px)"
+                  srcset="/src/assets/images/ad/graficki-dizajn-xxxl.jpg"
+                />
+                <source
+                  media="(min-width:650px)"
+                  srcset="/src/assets/images/ad/graficki-dizajn-xxl.jpg"
+                />
+                <source
+                  media="(min-width:465px)"
+                  srcset="/src/assets/images/ad/graficki-dizajn-xl.jpg"
+                />
+                <img
+                  src="/src/assets/images/ad/graficki-dizajn.jpg"
+                  alt="graficki dizajn"
+                />
+              </picture>
+            </div>
+            <div class="swiper-slide">
+              <picture>
+                <source
+                  media="(min-width:900px)"
+                  srcset="/src/assets/images/ad/mreze-img-xxxl.jpg"
+                />
+                <source
+                  media="(min-width:650px)"
+                  srcset="/src/assets/images/ad/mreze-img-xxl.jpg"
+                />
+                <source
+                  media="(min-width:465px)"
+                  srcset="/src/assets/images/ad/mreze-img-xl.jpg"
+                />
+                <img src="/src/assets/images/ad/mreze-img.jpg" alt="socials" />
+              </picture>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </section>
+      <!-- UPITNIK -->
+      <section class="upitnik ui-wrapper-1">
+        <div class="container">
+          <p class="upitnik__paragraph">
+            Najbolja solucija je ispunjavanje upitnika. Preko te metode najlakše
+            možemo doći do zajedničkog rješenja za Vas!
+          </p>
+          <div class="upitnik__wrapper">
+            <div class="upitnik-wrapper ui-wrapper-1">
+              <h2 class="upitnik__heading">Upitnik za web rješenje</h2>
+              <a
+                class="upitnik-btn"
+                href="https://forms.gle/Y52jvhV4HMWGwBCK7"
+                target="_blank"
+                >Upitnik
+                <img
+                  src="/src/assets/icons/collect-icon.svg"
+                  aria-hidden="true"
+                  class="icon"
+              /></a>
+            </div>
+            <div class="upitnik-wrapper ui-wrapper-1">
+              <h2 class="upitnik__heading">Upitnik za grafički dizajn</h2>
+              <a
+                class="upitnik-btn"
+                href="https://forms.gle/D4cta5W2kXZ9iVscA"
+                target="_blank"
+                >Upitnik
+                <img
+                  src="/src/assets/icons/collect-icon.svg"
+                  aria-hidden="true"
+                  class="icon"
+              /></a>
+            </div>
+            <div class="upitnik-wrapper ui-wrapper-1">
+              <h2 class="upitnik__heading">Upitnik za društvene mreže</h2>
+              <a
+                class="upitnik-btn"
+                href="https://forms.gle/GiBgjvSA9r3tXxzx5"
+                target="_blank"
+                >Upitnik
+                <img
+                  src="/src/assets/icons/collect-icon.svg"
+                  aria-hidden="true"
+                  class="icon"
+              /></a>
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="consult__wrapper ui-wrapper-1">
+            <h2 class="h2-heading konzultacije-heading">
+              Zatražite besplatne konzultacije
+            </h2>
+            <p>
+              Ukoliko Vam trebaju konzultacije za izradu web stranice ili
+              trebate možda analizu Vašeg websitea, ili ponudu za izradu web
+              stranice, rado ćemo to učiniti za Vas, i to besplatno.
+              <br /><br />
+              Javite nam se s povjerenjem!
+              <br /><br />
+            </p>
+            <div class="consult__inner-wrapper ui-wrapper">
+              <form class="consult-email" id="emailForm">
+                <input
+                  type="email"
+                  id="userEmail"
+                  class="consult-mail__input"
+                  placeholder="mail@gmail.com"
+                  required
+                />
+                <button type="submit" class="consult-mail__submit-btn">
+                  Zatraži ponudu
+                  <img
+                    src="src/assets/icons/send-icon.svg"
+                    aria-hidden="true"
+                  />
+                </button>
+              </form>
             </div>
           </div>
         </div>

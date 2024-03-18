@@ -17,10 +17,10 @@ if (
   window.location.href.includes("index")
 ) {
   // HOME SCREEN BANNER
-  var swiper = new Swiper(".cube", {
-    effect: "cube",
+  var swiper = new Swiper(".flip", {
+    effect: "flip",
     loop: true,
-    speed: 1000,
+    speed: 2000,
     autoplay: {
       delay: 2500,
       disableOnInteraction: false,

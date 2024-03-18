@@ -24,7 +24,8 @@
 }
 /* effects cube home page */
 
-.cube .swiper-slide img {
+.flip .swiper-slide img {
   height: 100%;
   width: 100%;
+  object-fit: contain;
 }

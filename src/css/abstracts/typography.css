@@ -131,7 +131,22 @@ a {
   background-color: rgb(6, 97, 216);
   box-shadow: 0 0 10px 2px rgb(53, 53, 255);
 }
-.h2-heading--home-page-center {
+.ponuda__heading {
+  text-transform: uppercase;
+  margin: auto;
+  text-align: center;
+  font-size: 1.1rem;
+  font-weight: 500;
+  padding-inline: 10px;
+}
+.upitnik__heading {
+  margin-bottom: 1.5rem;
+}
+.upitnik__paragraph {
+  margin-bottom: 2rem;
+  text-align: center;
+  max-width: 600px;
+  margin-inline: auto;
 }
 @media (min-width: 768px) {
   .faq-heading {

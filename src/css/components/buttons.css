@@ -170,8 +170,11 @@ button {
   flex: 1;
   min-width: 200px;
   width: 100%;
-  /* width: 50vmax; */
   height: 250px;
+}
+.portfolio-video-btn:hover {
+  outline: 1px solid var(--white);
+  filter: contrast(130%);
 }
 .portfolio-video-btn::after {
   content: attr(data-heading);
@@ -233,9 +236,6 @@ button {
     width: 50vw;
     height: 250px;
     transition: 0.3s;
-  }
-  .portfolio-video-btn:hover {
-    filter: contrast(130%);
   }
 }
 .upitnik-btn {

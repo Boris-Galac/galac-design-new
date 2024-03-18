@@ -1,6 +1,9 @@
 .body-faq {
   padding: 0.5rem;
 }
+.main-faq {
+  padding: 0.5rem;
+}
 .faq {
   position: relative;
   isolation: isolate;

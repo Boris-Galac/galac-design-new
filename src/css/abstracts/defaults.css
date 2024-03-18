@@ -31,6 +31,7 @@ figure {
 }
 section {
   position: relative;
+  padding-inline: 0.5rem;
 }
 
 /* width */
