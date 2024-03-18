@@ -48,11 +48,11 @@ if (
       toggleClass: "scale",
       scrollTrigger: {
         scrub: 2,
-        trigger: ".dot",
+        trigger: imgWbeiste,
         toggleActions: "restart none none none", ///  1. onEnter 2. onLeave  3. onEnterBack  4. onLeaveBack
-        start: "top 85%",
-        end: "top 30%",
-        // markers: true,
+        start: "center 70%",
+        end: "bottom 50%",
+        markers: true,
       },
     });
   } else {
@@ -63,13 +63,13 @@ if (
       scale: 1.4,
       rotationX: 50,
       rotationY: 360,
-      duration: 2,
+      // duration: 20,
       scrollTrigger: {
-        scrub: 1,
-        trigger: ".dot",
+        scrub: 2,
+        trigger: imgWbeiste,
         toggleActions: "restart none none none", ///  1. onEnter 2. onLeave  3. onEnterBack  4. onLeaveBack
-        start: "top 85%",
-        end: "top 50%",
+        start: "center 80%",
+        end: "center 50%",
         // markers: true,
       },
     });

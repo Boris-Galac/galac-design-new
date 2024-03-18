@@ -38,6 +38,7 @@
 .footer__bottom-info {
   display: flex;
   flex-direction: column;
+  margin-inline: auto;
   gap: 2rem;
 }
 .footer__obrt-info {
