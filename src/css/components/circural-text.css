@@ -11,8 +11,10 @@
 .circle-link {
   position: absolute;
   right: -2rem;
+  transform: translateX(-50%);
+  left: 50%;
   width: 200px;
-  bottom: 0rem;
+  bottom: 12rem;
   border-radius: 100vmax;
   overflow: hidden;
   aspect-ratio: 1;
@@ -100,6 +102,26 @@
 
 @media (min-width: 1024px) {
   .circle-link {
-    right: 0rem;
+    bottom: 31rem;
+  }
+}
+@media (max-height: 690px) {
+  .circle-link {
+    position: absolute;
+    right: -2rem;
+    transform: translateX(-50%);
+    left: 50%;
+    width: 200px;
+    bottom: 172px;
+    width: 50%;
+    border-radius: 100vmax;
+    overflow: hidden;
+    aspect-ratio: 1;
+  }
+  .down-icon {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 57%;
   }
 }

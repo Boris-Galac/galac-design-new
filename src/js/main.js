@@ -39,37 +39,29 @@ if (
   if (windowWidth > 1024) {
     // gsap animation for website img
     gsap.registerPlugin(ScrollTrigger);
-    const imgWbeiste = document.querySelector(".hero-website");
+    const imgWbeiste = document.querySelector(".hero__website-slider");
     gsap.to(imgWbeiste, {
-      scale: 1.6,
-      rotationX: 50,
-      rotationY: 360,
-      duration: 3,
-      toggleClass: "scale",
+      x: 2000,
       scrollTrigger: {
         scrub: 2,
-        trigger: imgWbeiste,
+        trigger: ".hero",
         toggleActions: "restart none none none", ///  1. onEnter 2. onLeave  3. onEnterBack  4. onLeaveBack
-        start: "center 70%",
-        end: "bottom 50%",
-        // markers: true,
+        start: "bottom 100%",
+        end: "bottom 5%",
       },
     });
   } else {
     // gsap animation for website img
     gsap.registerPlugin(ScrollTrigger);
-    const imgWbeiste = document.querySelector(".hero-website");
+    const imgWbeiste = document.querySelector(".hero__website-slider");
     gsap.to(imgWbeiste, {
-      scale: 1.4,
-      rotationX: 50,
-      rotationY: 360,
-      // duration: 20,
+      x: 1000,
       scrollTrigger: {
         scrub: 2,
-        trigger: imgWbeiste,
+        trigger: ".hero",
         toggleActions: "restart none none none", ///  1. onEnter 2. onLeave  3. onEnterBack  4. onLeaveBack
-        start: "center 80%",
-        end: "center 50%",
+        start: "bottom 100%",
+        end: "bottom 5%",
         // markers: true,
       },
     });
