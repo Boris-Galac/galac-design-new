@@ -52,7 +52,7 @@ if (
         toggleActions: "restart none none none", ///  1. onEnter 2. onLeave  3. onEnterBack  4. onLeaveBack
         start: "center 70%",
         end: "bottom 50%",
-        markers: true,
+        // markers: true,
       },
     });
   } else {
