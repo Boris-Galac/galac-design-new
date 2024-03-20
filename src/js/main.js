@@ -1,11 +1,16 @@
 document.addEventListener("DOMContentLoaded", () => {
-  if (window.location.href.length === 22) {
+  if (
+    window.location.href.length === 22 ||
+    window.location.href.length === 28
+  ) {
     document.querySelector(".splashscreen").setAttribute("data-active", "true");
     setTimeout(() => {
       document.querySelector(".splashscreen").remove();
     }, 4000);
   } else {
-    return;
+    if (document.querySelector(".splashscreen")) {
+      document.querySelector(".splashscreen").remove();
+    }
   }
 });
 //// 💡💡💡💡💡💡 INDEX
