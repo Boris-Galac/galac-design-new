@@ -34,12 +34,15 @@ button {
   pointer-events: none;
 }
 .project-btn {
+  display: grid;
+  place-items: center;
   padding: 0.25rem;
   aspect-ratio: 1;
   min-width: 50px;
   width: min(100%, 140px);
   background-color: hsla(0, 0%, 0%, 0.501);
   border-radius: 1rem;
+  height: -webkit-fill-available;
   transition: 0.3s;
   cursor: pointer;
 }

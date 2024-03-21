@@ -66,7 +66,7 @@
 }
 .splashscreen-word {
   font-weight: 900;
-  font-size: clamp(2rem, 7vw, 5rem);
+  font-size: clamp(2rem, 5vh, 5rem);
 }
 .splashscreen-word:nth-child(1) {
   opacity: 0;

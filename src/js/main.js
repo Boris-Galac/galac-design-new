@@ -44,7 +44,7 @@ if (
   if (windowWidth > 1024) {
     // gsap animation for website img
     gsap.registerPlugin(ScrollTrigger);
-    const imgWbeiste = document.querySelector(".hero__website-slider");
+    const imgWbeiste = document.querySelector(".hero__website-slider--desktop");
     gsap.to(imgWbeiste, {
       x: 2000,
       scrollTrigger: {
@@ -58,7 +58,7 @@ if (
   } else {
     // gsap animation for website img
     gsap.registerPlugin(ScrollTrigger);
-    const imgWbeiste = document.querySelector(".hero__website-slider");
+    const imgWbeiste = document.querySelector(".hero__website-slider--mobile");
     gsap.to(imgWbeiste, {
       x: 1000,
       scrollTrigger: {
@@ -133,7 +133,7 @@ if (window.location.href.includes("usluge")) {
   });
 }
 
-////// 💡💡💡💡💡💡 USLUGE & CIJENE
+////// 💡💡💡💡💡💡 USLUGE & KATALOG
 
 if (
   window.location.href.includes("usluge") ||
@@ -402,4 +402,91 @@ function createOverlay(element) {
       overlay.remove();
     });
   });
+}
+
+//// PONUDA GRAFICKI DIZAJN BTN
+
+if (
+  document.querySelector(".body-home") ||
+  window.location.href.includes("katalog")
+) {
+  const ponudaGrafickiDizajnBtn = document.querySelector(
+    "#ponuda-graficki-dizajn-btn"
+  );
+  const ponudaMrezeBtn = document.querySelector("#ponuda-mreze-btn");
+  // Add click event listener to #ponuda-graficki-dizajn-btn
+  if (ponudaGrafickiDizajnBtn) {
+    ponudaGrafickiDizajnBtn.addEventListener("click", (e) => {
+      // Save a word into local storage when the button is clicked
+      window.location.href = "katalog.html";
+      localStorage.setItem("grafika", "true");
+    });
+  }
+  // Add click event listener to #ponuda-graficki-dizajn-btn
+  if (ponudaMrezeBtn) {
+    ponudaMrezeBtn.addEventListener("click", (e) => {
+      // Save a word into local storage when the button is clicked
+      window.location.href = "katalog.html";
+      localStorage.setItem("mreze", "true");
+    });
+  }
+
+  // GRAFIKA
+  if (
+    localStorage.getItem("grafika") &&
+    window.location.href.includes("katalog")
+  ) {
+    // TAB SOLUTION
+    document.querySelectorAll(".tab-btn").forEach((btn) => {
+      document
+        .querySelectorAll(".tab-btn")
+        .forEach((btn) => btn.setAttribute("data-active", "false"));
+      document
+        .querySelector('.tab-btn[data-tab="tab-content-2"]')
+        .setAttribute("data-active", "true");
+      if (
+        document
+          .querySelector('.tab-btn[data-tab="tab-content-2"]')
+          .getAttribute("data-active") === "true"
+      ) {
+        document.querySelectorAll(".tab-content").forEach((tab) => {
+          tab.setAttribute("data-active", "false");
+        });
+        document
+          .querySelector(".tab-content[data-tabcontent='tab-content-2']")
+          .setAttribute("data-active", "true");
+      }
+    });
+  }
+  // MREZE
+  if (
+    localStorage.getItem("mreze") &&
+    window.location.href.includes("katalog")
+  ) {
+    // TAB SOLUTION
+    document.querySelectorAll(".tab-btn").forEach((btn) => {
+      document
+        .querySelectorAll(".tab-btn")
+        .forEach((btn) => btn.setAttribute("data-active", "false"));
+      document
+        .querySelector('.tab-btn[data-tab="tab-content-3"]')
+        .setAttribute("data-active", "true");
+      if (
+        document
+          .querySelector('.tab-btn[data-tab="tab-content-3"]')
+          .getAttribute("data-active") === "true"
+      ) {
+        document.querySelectorAll(".tab-content").forEach((tab) => {
+          tab.setAttribute("data-active", "false");
+        });
+        document
+          .querySelector(".tab-content[data-tabcontent='tab-content-3']")
+          .setAttribute("data-active", "true");
+      }
+    });
+  }
+}
+if (!window.location.href.includes("katalog")) {
+  localStorage.removeItem("grafika");
+  localStorage.removeItem("mreze");
 }
