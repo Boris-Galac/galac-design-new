@@ -88,12 +88,26 @@ if (window.location.href.includes("graficki-dizajn")) {
       project.setAttribute("data-active", "false");
       layoutBtn.setAttribute("data-active", "false");
     });
+    projectBtns.forEach((btn) => {
+      btn.style = `
+        outline: 0;
+        `;
+    });
   });
   projectBtns.forEach((btn) => {
     btn.addEventListener("click", (e) => {
+      const abc = [...btn.parentElement.children];
+      abc.forEach((btn) => {
+        btn.style = `
+        outline: 0;
+        `;
+      });
       projects.forEach((project) => {
         project.setAttribute("data-active", "false");
         if (btn.dataset.project === project.id) {
+          btn.style = `
+            outline: 2px solid lime;
+          `;
           layoutBtn.setAttribute("data-active", "true");
           project.setAttribute("data-active", "true");
         }
@@ -291,6 +305,8 @@ const observer = new IntersectionObserver(
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         entry.target.classList.add("active");
+      } else {
+        entry.target.classList.remove("active");
       }
     });
   },
