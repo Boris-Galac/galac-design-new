@@ -13,6 +13,7 @@
   --effect-linear-2: hsla(240, 67%, 51%, 0.9);
   --effect-linear-3: hsla(348, 67%, 51%, 0.15);
   --overlay-clr: hsla(0, 0%, 0%, 0.9);
+  --font-clr: #fff;
   /* darker */
   --mid-white: hsla(209, 100%, 50%, 0.1);
   --mid-white-hover: hsla(221, 100%, 50%, 0.298);
@@ -24,6 +25,7 @@
   --effect-linear-3: hsla(219, 100%, 51%, 0.15);
 }
 body.light-theme {
+  --font-clr: rgb(31, 39, 50);
   --blue-glass-clr: rgba(0, 0, 0, 0.39);
   --effect-linear-1: hsl(206, 53%, 82%);
   --effect-linear-2: hsla(240, 80%, 79%, 0.9);

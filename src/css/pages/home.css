@@ -13,11 +13,13 @@
   display: flex;
   flex-direction: column;
   grid-row: 1;
+  margin-top: 15vh;
 }
 .headline,
 .subheadline {
   text-transform: uppercase;
   text-align: center;
+  color: var(--font-clr);
 }
 .headline {
   font-size: clamp(1.5rem, 9vw, 5rem);
@@ -89,7 +91,7 @@
     padding: 1rem;
     display: flex;
     flex-direction: column;
-    margin-top: 5vh;
+    margin-top: 21vh;
   }
   .hero-website {
     position: absolute;

@@ -21,7 +21,7 @@ if (
   window.location.href.includes("offer") ||
   window.location.href.includes("index")
 ) {
-  // HOME SCREEN BANNER
+  // HOME SCREEN BANNERa
   var swiper = new Swiper(".flip", {
     effect: "flip",
     loop: true,
@@ -39,38 +39,6 @@ if (
       el: ".swiper-pagination",
     },
   });
-  const windowWidth = window.innerWidth;
-
-  if (windowWidth > 1024) {
-    // gsap animation for website img
-    gsap.registerPlugin(ScrollTrigger);
-    const imgWbeiste = document.querySelector(".hero__website-slider--desktop");
-    gsap.to(imgWbeiste, {
-      x: 2000,
-      scrollTrigger: {
-        scrub: 2,
-        trigger: ".hero",
-        toggleActions: "restart none none none", ///  1. onEnter 2. onLeave  3. onEnterBack  4. onLeaveBack
-        start: "bottom 100%",
-        end: "bottom 5%",
-      },
-    });
-  } else {
-    // gsap animation for website img
-    gsap.registerPlugin(ScrollTrigger);
-    const imgWbeiste = document.querySelector(".hero__website-slider--mobile");
-    gsap.to(imgWbeiste, {
-      x: 1000,
-      scrollTrigger: {
-        scrub: 2,
-        trigger: ".hero",
-        toggleActions: "restart none none none", ///  1. onEnter 2. onLeave  3. onEnterBack  4. onLeaveBack
-        start: "bottom 100%",
-        end: "bottom 5%",
-        // markers: true,
-      },
-    });
-  }
 }
 
 //// 💡💡💡💡💡💡 GRAFICKI DIZAJN
