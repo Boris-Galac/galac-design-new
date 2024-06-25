@@ -47,6 +47,14 @@
 .hero__website-slider--desktop {
   display: none !important;
 }
+.hero-socials {
+  position: absolute;
+  left: 1rem;
+  bottom: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
 @media (max-height: 670px) {
   .headline {
     font-size: clamp(1.5rem, 7.5vw, 5rem);
@@ -107,6 +115,14 @@
   .hero__website-slider img {
     width: 30%;
     box-shadow: 0 0 32px rgba(1, 26, 214, 0.551);
+  }
+  .hero-socials {
+    position: absolute;
+    left: 2rem;
+    bottom: 5rem;
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
   }
 }
 .hero.ui-wrapper::before {
