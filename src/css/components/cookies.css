@@ -1,0 +1,64 @@
+.cookies-modal {
+  position: fixed;
+  bottom: 2rem;
+  transform: translateX(-50%);
+  left: 50%;
+  background-color: #252a2e;
+  color: #fff;
+  padding: 1rem;
+  border-radius: 7px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  display: grid;
+  place-items: center;
+  max-width: 30rem;
+  margin-inline: auto;
+  box-shadow: 0 0 1rem #00000036;
+  width: 85%;
+  outline: 2px solid #444;
+}
+.cookies-modal a {
+  font-size: inherit;
+  border-bottom: 1px solid white;
+}
+@media (min-width: 1024px) {
+  .cookies-modal {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    transform: unset;
+    left: unset;
+    padding: 1rem;
+    border-radius: 7px;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    display: grid;
+    place-items: center;
+    max-width: 30rem;
+    margin-inline: auto;
+    box-shadow: 0 0 1rem #00000036;
+    width: 85%;
+  }
+}
+.cookies-modal[aria-expanded="false"] {
+  opacity: 0;
+  pointer-events: none;
+}
+.cookies-modal[aria-expanded="true"] {
+  opacity: 1;
+  pointer-events: visible;
+}
+.cookies-modal__paragraph {
+  color: #fff;
+  margin-bottom: 1rem;
+}
+.cookies-modal__btn {
+  background-color: #000;
+  border-radius: 4px;
+  color: #fff;
+  text-transform: uppercase;
+  padding-inline: 2rem;
+  padding-block: 1rem;
+  transition: 0.15s;
+}
+.cookies-modal__btn:hover {
+  background-color: #3d444b;
+}

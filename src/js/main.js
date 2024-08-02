@@ -474,3 +474,17 @@ if (!window.location.href.includes("katalog")) {
   localStorage.removeItem("grafika");
   localStorage.removeItem("mreze");
 }
+
+//// COOKIES MODAL
+
+if (!localStorage.getItem("data")) {
+  const cookesModal = document.querySelector(".cookies-modal");
+  cookesModal.setAttribute("aria-expanded", "true");
+
+  cookesModal.addEventListener("click", (e) => {
+    if (e.target.matches(".cookies-modal__btn")) {
+      e.currentTarget.setAttribute("aria-expanded", "false");
+      localStorage.setItem("data", "cookies-accepted");
+    }
+  });
+}
