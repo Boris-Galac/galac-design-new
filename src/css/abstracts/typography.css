@@ -45,6 +45,41 @@ a {
   text-transform: uppercase;
   font-size: 1.1rem;
 }
+.headline,
+.subheadline {
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--font-clr);
+}
+.headline {
+  font-size: clamp(1.5rem, 9vw, 5rem);
+  margin-bottom: 1rem;
+}
+.subheadline {
+  position: relative;
+  isolation: isolate;
+}
+.subheadline::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  border-radius: 4px;
+  background-color: #ffffff14;
+  backdrop-filter: blur(10px);
+  z-index: -1;
+  animation: subheadline-animation 3s forwards ease;
+  animation-delay: 3.5s;
+}
+@keyframes subheadline-animation {
+  from {
+    right: 100%;
+  }
+  to {
+    right: 0;
+  }
+}
 .see-web-heading {
   font-size: 0.9rem;
 }
