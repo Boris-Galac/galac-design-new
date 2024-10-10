@@ -38,6 +38,7 @@ section {
 ::-webkit-scrollbar {
   width: 7px;
 }
+
 *::selection {
   background-color: var(--black);
   color: var(--white);

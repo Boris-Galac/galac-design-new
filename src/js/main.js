@@ -341,6 +341,7 @@ hamBtn.addEventListener("click", (e) => {
     hamBtn.setAttribute("data-active", "false");
     nav.setAttribute("aria-expanded", "false");
     const overlay = document.querySelector(".overlay");
+    document.body.classList.remove("lock-scroll");
     overlay.setAttribute("data-visible", "false");
     overlay.setAttribute("aria-expanded", "false");
     overlay.addEventListener("animationend", (e) => {
@@ -349,6 +350,7 @@ hamBtn.addEventListener("click", (e) => {
   } else {
     hamBtn.setAttribute("data-active", "true");
     nav.setAttribute("aria-expanded", "true");
+    document.body.classList.add("lock-scroll");
     // overlay
     const overlay = document.createElement("div");
     overlay.setAttribute("class", "overlay overlay--darker");
@@ -358,6 +360,7 @@ hamBtn.addEventListener("click", (e) => {
     document.body.append(overlay);
     overlay.addEventListener("click", (e) => {
       if (e.target !== e.currentTarget) return;
+      document.body.classList.remove("lock-scroll");
 
       overlay.setAttribute("data-visible", "false");
       hamBtn.setAttribute("data-active", "false");
