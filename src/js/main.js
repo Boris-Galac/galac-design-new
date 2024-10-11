@@ -491,3 +491,5 @@ if (!localStorage.getItem("data")) {
     }
   });
 }
+
+console.log("hej");
