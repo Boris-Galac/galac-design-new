@@ -18,6 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
 if (
   window.location.href.length === 22 ||
   window.location.href.length === 32 ||
+  window.location.href.length === 28 ||
   window.location.href.includes("offer") ||
   window.location.href.includes("index")
 ) {
@@ -491,5 +492,3 @@ if (!localStorage.getItem("data")) {
     }
   });
 }
-
-console.log("hej hej hej");
