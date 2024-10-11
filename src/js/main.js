@@ -492,4 +492,4 @@ if (!localStorage.getItem("data")) {
   });
 }
 
-console.log("hej");
+console.log("hej hej hej");
