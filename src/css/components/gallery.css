@@ -1,7 +1,11 @@
 .gallery {
-  display: flex;
+  /* display: flex;
   flex-wrap: wrap;
-  gap: 1rem;
+  gap: 1rem; */
+  columns: 300px;
+}
+.gallery img {
+  margin-bottom: 1rem;
 }
 .project__gallery img {
   cursor: pointer;
